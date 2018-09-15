@@ -1,8 +1,7 @@
-Prenda:
+idPrenda:
 	id -> sequence;
 	descripcion -> (60 chars promedio, 120 max);
 	costoUnitario -> double();
-	moneda???
 	imagen -> Varbinary;
 	video -> Varbinary
 
