@@ -1,0 +1,96 @@
+Prenda:
+	id -> sequence;
+	descripcion -> (60 chars promedio, 120 max);
+	costoUnitario -> double();
+	moneda???
+	imagen -> Varbinary;
+	video -> Varbinary
+
+Estilo:
+	id -> sequence;
+	color -> char();
+	descripcion -> char(50);
+
+MateriaPrima:
+	/*
+	 * Volumen 20 000 elementos
+	 * Crecimiento anual 10%
+	 */
+	id -> sequence;
+	unidadMedida -> char(4);
+	cantidadMinima -> double;
+	existenciaActual -> double;
+	costoUnitario -> double;
+	descripcion -> char(100)
+
+Receta_MateriaPrima:
+	receta -> fk;
+	cantidad -> double;
+
+Proveedores:
+	id -> sequence;
+	nombre -> tipo (ck: "n" or "f");
+	direccion -> char(100);
+	correoElectronico -> char(50);
+	telefono -> numeric(11);
+	nombreContacto -> char(6);
+
+ProveedorExtranjero:
+	proveedor -> fk;
+	banco -> char(10);
+	cuenta -> numeric(10)
+
+ProveedorNacional:
+	proveedor -> fk;
+	cedula -> numeric(10) } UK;
+	maximoDias -> numeric(4);
+
+MateriaPrima_Proveedor:
+	proveedor -> fk;
+	materiaPrima -> fk;
+	costoUnidad -> double;
+	cantidadMinima -> double;
+	tiempoEntrega -> dobule;
+
+Cliente:
+	id -> sequence;
+	pais -> char(15); ======== } UK
+	cedula -> numeric(10); === }
+	nombre -> char(10);
+	apellido -> char(10);
+	direccion -> char(30);
+	correoElectronico -> char(40);
+	telefono -> numeric(10);
+	direccionCobro -> varchar(30);
+
+Solicitud:
+	id -> sequence;
+	cliente -> fk;
+	fechaPedido -> date;
+	fechaEntrega -> date;
+
+Receta:
+	id -> sequence;
+	prenda -> fk;
+	estilo -> fk;
+	talla -> char(3);
+
+OrdenProduccion:
+	solicitud -> fk;
+	id_orden -> numeric;
+	receta -> fk;
+	cantidad -> numeric;
+	fechaProgramada -> date;
+
+Produccion:
+	fecha_inicio -> date
+	fecha_fin -> date
+
+OrdenCompra:
+	id -> sequence;
+	fecha -> date;
+	proveedor -> fk;
+
+Linea_OrdenCompra:
+	materiaPrima -> fk;
+	cantidad -> int;
