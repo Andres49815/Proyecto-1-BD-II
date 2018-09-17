@@ -42,14 +42,8 @@
     <column>
       <name>UNIT_COST</name>
       <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>size</key>
-            <value class="java.lang.Long">20</value>
-          </entry>
-        </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
+          <typeName>DOUBLE PRECISION</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
@@ -139,6 +133,20 @@
     <entry>
       <key>Comment</key>
       <value class="java.lang.String">Tabla para representar las prendas</value>
+    </entry>
+    <entry>
+      <key>OracleStorageProperties</key>
+      <value class="oracle.javatools.db.ora.OracleStorageProperties">
+        <freelistGroups>2</freelistGroups>
+        <freelists>2</freelists>
+        <initialExtent>176000</initialExtent>
+        <initrans>1</initrans>
+        <minExtent>1</minExtent>
+        <nextExtent>176000</nextExtent>
+        <percentFree>30</percentFree>
+        <percentIncrease>0</percentIncrease>
+        <percentUsed>60</percentUsed>
+      </value>
     </entry>
     <entry>
       <key>TableType</key>

@@ -42,14 +42,8 @@
     <column>
       <name>MIN_QUANTITY</name>
       <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>size</key>
-            <value class="java.lang.Long">20</value>
-          </entry>
-        </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
+          <typeName>DOUBLE PRECISION</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
@@ -157,6 +151,21 @@
     </index>
   </indexes>
   <properties>
+    <entry>
+      <key>OracleStorageProperties</key>
+      <value class="oracle.javatools.db.ora.OracleStorageProperties">
+        <freelistGroups>3</freelistGroups>
+        <freelists>3</freelists>
+        <initialExtent>1100000</initialExtent>
+        <initrans>1</initrans>
+        <maxExtent>0</maxExtent>
+        <minExtent>1</minExtent>
+        <nextExtent>100000</nextExtent>
+        <percentFree>10</percentFree>
+        <percentIncrease>10</percentIncrease>
+        <percentUsed>75</percentUsed>
+      </value>
+    </entry>
     <entry>
       <key>TableType</key>
       <value class="oracle.javatools.db.Table$TableType">NORMAL</value>

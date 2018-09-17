@@ -107,6 +107,20 @@
   </indexes>
   <properties>
     <entry>
+      <key>OracleStorageProperties</key>
+      <value class="oracle.javatools.db.ora.OracleStorageProperties">
+        <freelistGroups>2</freelistGroups>
+        <freelists>2</freelists>
+        <initialExtent>450000</initialExtent>
+        <initrans>1</initrans>
+        <minExtent>1</minExtent>
+        <nextExtent>450000</nextExtent>
+        <percentFree>20</percentFree>
+        <percentIncrease>0</percentIncrease>
+        <percentUsed>70</percentUsed>
+      </value>
+    </entry>
+    <entry>
       <key>TableType</key>
       <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
     </entry>
