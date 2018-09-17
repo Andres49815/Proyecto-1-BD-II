@@ -26,6 +26,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en que se emite la orden</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>PROVIDER</name>
@@ -35,6 +41,33 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Proveedor a quien se le compra</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>WAITING</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">1</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>CHAR</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Si se encuentra en espera = &apos;Y&apos;, &apos;N&apos; en caso contrario</value>
+        </entry>
+      </properties>
     </column>
   </columns>
   <constraints>
@@ -64,8 +97,8 @@
         <type>CONSTRAINT</type>
       </referenceID>
     </constraint>
-    <constraint class="oracle.javatools.db.UniqueConstraint">
-      <name>PURCHASE_ORDER_UK1</name>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>PURCHASE_ORDER_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID</name>
@@ -80,7 +113,7 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>PURCHASE_ORDER_UK1</name>
+        <name>PURCHASE_ORDER_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>PURCHASE_ORDER</name>
           <schemaName>SC_PRENDAS</schemaName>
@@ -93,7 +126,7 @@
   </constraints>
   <indexes>
     <index>
-      <name>PURCHASE_ORDER_UK1</name>
+      <name>PURCHASE_ORDER_PK</name>
       <columnExpressions>
         <columnExpression>
           <expressionSource>ID</expressionSource>

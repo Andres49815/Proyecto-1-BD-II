@@ -68,7 +68,7 @@
       </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>LINE_PURCHASE_ORDER_FK1</name>
+      <name>HEADER_LINE_PURCHASE_ORDER_FK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>PURCHASE_ORDER</name>
@@ -83,7 +83,7 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PURCHASE_ORDER_UK1</name>
+        <name>PURCHASE_ORDER_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>PURCHASE_ORDER</name>
           <schemaName>SC_PRENDAS</schemaName>
@@ -94,7 +94,7 @@
       </referenceID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>LINE_PURCHASE_ORDER_FK2</name>
+      <name>LINE_PURCHASE_ORDER_RM_FK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>RAW_MATERIAL</name>
