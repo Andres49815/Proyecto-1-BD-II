@@ -3,7 +3,7 @@
   <name>LINE_REQUEST</name>
   <columns>
     <column>
-      <name>ID</name>
+      <name>REQUEST</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>INT</typeName>
@@ -19,33 +19,57 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Numero de linea en el request</value>
+        </entry>
+      </properties>
     </column>
     <column>
-      <name>RECEIPE</name>
+      <name>GARMENT</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>INT</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Prenda (con estilo) solicitada</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>GARMENT_SIZE</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>INT</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Tamano de la prenda solicitada</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>QUANTITY</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>DOUBLE PRECISION</typeName>
+          <typeName>INT</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
-    </column>
-    <column>
-      <name>PROGRAMMED_DATE</name>
-      <dataTypeUsage>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>DATE</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Cantidad de elementos de la prenda en la linea</value>
+        </entry>
+      </properties>
     </column>
   </columns>
   <constraints>
@@ -53,7 +77,7 @@
       <name>LINE_REQUEST_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID</name>
+          <name>REQUEST</name>
           <parent class="oracle.javatools.db.NameBasedID">
             <name>LINE_REQUEST</name>
             <schemaName>SC_PRENDAS</schemaName>
@@ -64,16 +88,6 @@
         </columnID>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>LINE_ID</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>LINE_REQUEST</name>
-            <schemaName>SC_PRENDAS</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SC_PRENDAS</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>RECEIPE</name>
           <parent class="oracle.javatools.db.NameBasedID">
             <name>LINE_REQUEST</name>
             <schemaName>SC_PRENDAS</schemaName>
@@ -96,10 +110,36 @@
       </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>LINE_REQUEST_RECIPE_FK</name>
+      <name>LINE_REQUEST_GARMENT_FK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>RECEIPE</name>
+          <name>GARMENT</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>LINE_REQUEST</name>
+            <schemaName>SC_PRENDAS</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>GARMENT_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>GARMENT</name>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SC_PRENDAS</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>LINE_REQUEST_GARMENT_SIZE_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>GARMENT_SIZE</name>
           <parent class="oracle.javatools.db.NameBasedID">
             <name>LINE_REQUEST</name>
             <schemaName>SC_PRENDAS</schemaName>
@@ -113,7 +153,7 @@
       <referenceID class="oracle.javatools.db.NameBasedID">
         <name>RECIPE_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>RECIPE</name>
+          <name>GARMENT_SIZE</name>
           <schemaName>SC_PRENDAS</schemaName>
           <type>TABLE</type>
         </parent>
@@ -125,7 +165,7 @@
       <name>LINE_REQUEST_REQUEST_FK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID</name>
+          <name>REQUEST</name>
           <parent class="oracle.javatools.db.NameBasedID">
             <name>LINE_REQUEST</name>
             <schemaName>SC_PRENDAS</schemaName>
@@ -153,15 +193,11 @@
       <name>LINE_REQUEST_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>ID</expressionSource>
+          <expressionSource>REQUEST</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
         <columnExpression>
           <expressionSource>LINE_ID</expressionSource>
-          <orderType>ASC</orderType>
-        </columnExpression>
-        <columnExpression>
-          <expressionSource>RECEIPE</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
@@ -178,10 +214,11 @@
       <value class="oracle.javatools.db.ora.OracleStorageProperties">
         <freelistGroups>5</freelistGroups>
         <freelists>5</freelists>
-        <initialExtent>32400000</initialExtent>
+        <initialExtent>48000000</initialExtent>
         <initrans>1</initrans>
+        <maxExtent>0</maxExtent>
         <minExtent>1</minExtent>
-        <nextExtent>32400000</nextExtent>
+        <nextExtent>48000000</nextExtent>
         <percentFree>10</percentFree>
         <percentIncrease>0</percentIncrease>
         <percentUsed>80</percentUsed>

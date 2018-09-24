@@ -3,7 +3,7 @@
   <name>RECIPE_RAWMATERIAL</name>
   <columns>
     <column>
-      <name>RECIPE</name>
+      <name>GARMENT</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>INT</typeName>
@@ -13,7 +13,22 @@
       <properties>
         <entry>
           <key>Comment</key>
-          <value class="java.lang.String">Talla, prenda y estilo</value>
+          <value class="java.lang.String">Prenda que se esta especificando</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>GARMENT_SIZE</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>INT</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Tamano de la prenda</value>
         </entry>
       </properties>
     </column>
@@ -43,7 +58,7 @@
       <properties>
         <entry>
           <key>Comment</key>
-          <value class="java.lang.String">Cantidad</value>
+          <value class="java.lang.String">Cantidad de la materia prima solicitada</value>
         </entry>
       </properties>
     </column>
@@ -53,7 +68,7 @@
       <name>RECIPE_RAWMATERIAL_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>RECIPE</name>
+          <name>RAW_MATERIAL</name>
           <parent class="oracle.javatools.db.NameBasedID">
             <name>RECIPE_RAWMATERIAL</name>
             <schemaName>SC_PRENDAS</schemaName>
@@ -63,7 +78,17 @@
           <type>COLUMN</type>
         </columnID>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>RAW_MATERIAL</name>
+          <name>GARMENT_SIZE</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>RECIPE_RAWMATERIAL</name>
+            <schemaName>SC_PRENDAS</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>GARMENT</name>
           <parent class="oracle.javatools.db.NameBasedID">
             <name>RECIPE_RAWMATERIAL</name>
             <schemaName>SC_PRENDAS</schemaName>
@@ -84,6 +109,32 @@
         <schemaName>SC_PRENDAS</schemaName>
         <type>INDEX</type>
       </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>GARMENT_RAWMATERIAL_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>GARMENT</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>RECIPE_RAWMATERIAL</name>
+            <schemaName>SC_PRENDAS</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>GARMENT_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>GARMENT</name>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SC_PRENDAS</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
       <name>RECIPE_RAWMATERIAL_FK</name>
@@ -112,10 +163,10 @@
       </referenceID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>RECIPE_RAWMATERIAL_RECIPE_FK</name>
+      <name>SIZE_RAWMATERIAL_FK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>RECIPE</name>
+          <name>GARMENT_SIZE</name>
           <parent class="oracle.javatools.db.NameBasedID">
             <name>RECIPE_RAWMATERIAL</name>
             <schemaName>SC_PRENDAS</schemaName>
@@ -129,7 +180,7 @@
       <referenceID class="oracle.javatools.db.NameBasedID">
         <name>RECIPE_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>RECIPE</name>
+          <name>GARMENT_SIZE</name>
           <schemaName>SC_PRENDAS</schemaName>
           <type>TABLE</type>
         </parent>
@@ -143,11 +194,15 @@
       <name>RECIPE_RAWMATERIAL_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>RECIPE</expressionSource>
+          <expressionSource>RAW_MATERIAL</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
         <columnExpression>
-          <expressionSource>RAW_MATERIAL</expressionSource>
+          <expressionSource>GARMENT_SIZE</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+        <columnExpression>
+          <expressionSource>GARMENT</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
@@ -164,10 +219,11 @@
       <value class="oracle.javatools.db.ora.OracleStorageProperties">
         <freelistGroups>2</freelistGroups>
         <freelists>2</freelists>
-        <initialExtent>6400000</initialExtent>
+        <initialExtent>420000</initialExtent>
         <initrans>1</initrans>
+        <maxExtent>0</maxExtent>
         <minExtent>1</minExtent>
-        <nextExtent>100000</nextExtent>
+        <nextExtent>420000</nextExtent>
         <percentFree>5</percentFree>
         <percentIncrease>0</percentIncrease>
         <percentUsed>85</percentUsed>

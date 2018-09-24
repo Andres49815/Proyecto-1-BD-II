@@ -1,23 +1,80 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>NATIONAL_PROVIDER</name>
+  <name>RAW_MATERIAL_PRV</name>
   <columns>
     <column>
-      <name>ID</name>
+      <name>PROVIDER</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>INT</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Proveedor de la materia prima</value>
+        </entry>
+      </properties>
     </column>
     <column>
-      <name>IDENTIFICATION_NUMBER</name>
+      <name>RAW_MATERIAL</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Materia Prima que suministra</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>UNIT_COST</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>DOUBLE PRECISION</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Costo por unidad de la materia</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>QUANTITY</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>DOUBLE PRECISION</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Cantidad minima que se le puede pedir de la materia</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>DELIVER_TIME</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
             <key>precision</key>
-            <value class="java.lang.String">11</value>
+            <value class="java.lang.String">2</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
@@ -28,34 +85,29 @@
       <properties>
         <entry>
           <key>Comment</key>
-          <value class="java.lang.String">Cedula</value>
-        </entry>
-      </properties>
-    </column>
-    <column>
-      <name>MAX_DAYS</name>
-      <dataTypeUsage>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>INT</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-      <properties>
-        <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">Pais</value>
+          <value class="java.lang.String">Tiempo que tarda en dar la materia</value>
         </entry>
       </properties>
     </column>
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>NATIONAL_PROVIDER_PK</name>
+      <name>RAW_MATERIAL_PRV_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID</name>
+          <name>RAW_MATERIAL</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>NATIONAL_PROVIDER</name>
+            <name>RAW_MATERIAL_PRV</name>
+            <schemaName>SC_PRENDAS</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>PROVIDER</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>RAW_MATERIAL_PRV</name>
             <schemaName>SC_PRENDAS</schemaName>
             <type>TABLE</type>
           </parent>
@@ -65,35 +117,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>NATIONAL_PROVIDER_PK</name>
+        <name>RAW_MATERIAL_PRV_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>NATIONAL_PROVIDER</name>
-          <schemaName>SC_PRENDAS</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SC_PRENDAS</schemaName>
-        <type>INDEX</type>
-      </indexID>
-    </constraint>
-    <constraint class="oracle.javatools.db.UniqueConstraint">
-      <name>NATIONAL_PROVIDER_UK</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>IDENTIFICATION_NUMBER</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>NATIONAL_PROVIDER</name>
-            <schemaName>SC_PRENDAS</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SC_PRENDAS</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>NATIONAL_PROVIDER_UK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>NATIONAL_PROVIDER</name>
+          <name>RAW_MATERIAL_PRV</name>
           <schemaName>SC_PRENDAS</schemaName>
           <type>TABLE</type>
         </parent>
@@ -102,12 +128,12 @@
       </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>NATIONAL_PROVIDER_FK</name>
+      <name>RAW_MATERIAL_PRV_PROVIDER_FK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID</name>
+          <name>PROVIDER</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>NATIONAL_PROVIDER</name>
+            <name>RAW_MATERIAL_PRV</name>
             <schemaName>SC_PRENDAS</schemaName>
             <type>TABLE</type>
           </parent>
@@ -130,24 +156,14 @@
   </constraints>
   <indexes>
     <index>
-      <name>NATIONAL_PROVIDER_PK</name>
+      <name>RAW_MATERIAL_PRV_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>ID</expressionSource>
+          <expressionSource>RAW_MATERIAL</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
-      </columnExpressions>
-      <indexType>UNIQUE</indexType>
-      <schema>
-        <name>SC_PRENDAS</name>
-      </schema>
-      <systemGenerated>true</systemGenerated>
-    </index>
-    <index>
-      <name>NATIONAL_PROVIDER_UK</name>
-      <columnExpressions>
         <columnExpression>
-          <expressionSource>IDENTIFICATION_NUMBER</expressionSource>
+          <expressionSource>PROVIDER</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
@@ -162,12 +178,12 @@
     <entry>
       <key>OracleStorageProperties</key>
       <value class="oracle.javatools.db.ora.OracleStorageProperties">
-        <initialExtent>1400</initialExtent>
+        <initialExtent>2800000</initialExtent>
         <minExtent>1</minExtent>
-        <nextExtent>1400</nextExtent>
-        <percentFree>7</percentFree>
+        <nextExtent>2800000</nextExtent>
+        <percentFree>24</percentFree>
         <percentIncrease>0</percentIncrease>
-        <percentUsed>83</percentUsed>
+        <percentUsed>66</percentUsed>
       </value>
     </entry>
     <entry>

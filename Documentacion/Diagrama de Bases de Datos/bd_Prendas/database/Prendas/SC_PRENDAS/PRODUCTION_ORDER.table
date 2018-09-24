@@ -1,9 +1,18 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>RAWMATERIAL_PROVIDER</name>
+  <name>PRODUCTION_ORDER</name>
   <columns>
     <column>
-      <name>RAW_MATERIAL</name>
+      <name>ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>INT</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>ID_REQUEST</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>INT</typeName>
@@ -13,12 +22,12 @@
       <properties>
         <entry>
           <key>Comment</key>
-          <value class="java.lang.String">Materia prima</value>
+          <value class="java.lang.String">Orden de produccion a la que pertenece los datos</value>
         </entry>
       </properties>
     </column>
     <column>
-      <name>PROVIDER</name>
+      <name>LINE_ID</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>INT</typeName>
@@ -28,36 +37,27 @@
       <properties>
         <entry>
           <key>Comment</key>
-          <value class="java.lang.String">Proveedor</value>
+          <value class="java.lang.String">Numero de linea de orden a la que pertenece la orden</value>
         </entry>
       </properties>
     </column>
     <column>
-      <name>UNIT_COST</name>
+      <name>PRDDATE</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>DOUBLE PRECISION</typeName>
+          <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
       <properties>
         <entry>
           <key>Comment</key>
-          <value class="java.lang.String">Costo por unidad</value>
+          <value class="java.lang.String">Fecha maxima para cuando debe ser completada la orden</value>
         </entry>
       </properties>
     </column>
     <column>
-      <name>MIN_QUANTITY</name>
-      <dataTypeUsage>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>DOUBLE PRECISION</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-    </column>
-    <column>
-      <name>DELIVER_TIME</name>
+      <name>UNITS</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>INT</typeName>
@@ -67,29 +67,40 @@
       <properties>
         <entry>
           <key>Comment</key>
-          <value class="java.lang.String">Tiempo de entrega</value>
+          <value class="java.lang.String">Unidades que deben ser completadas en dicha orden</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>STATE</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">1</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>CHAR</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Estado (Pendiente, Completado)</value>
         </entry>
       </properties>
     </column>
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>RAWMATERIAL_PROVIDER_PK</name>
+      <name>PRODUCTION_ORDER_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>PROVIDER</name>
+          <name>ID</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>RAWMATERIAL_PROVIDER</name>
-            <schemaName>SC_PRENDAS</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SC_PRENDAS</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>RAW_MATERIAL</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>RAWMATERIAL_PROVIDER</name>
+            <name>PRODUCTION_ORDER</name>
             <schemaName>SC_PRENDAS</schemaName>
             <type>TABLE</type>
           </parent>
@@ -99,9 +110,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>RAWMATERIAL_PROVIDER_PK</name>
+        <name>PRODUCTION_ORDER_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>RAWMATERIAL_PROVIDER</name>
+          <name>PRODUCTION_ORDER</name>
           <schemaName>SC_PRENDAS</schemaName>
           <type>TABLE</type>
         </parent>
@@ -110,12 +121,22 @@
       </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>RAWMATERIAL_PROVIDER_FK1</name>
+      <name>PRODUCTION_ORDER_FK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>PROVIDER</name>
+          <name>ID_REQUEST</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>RAWMATERIAL_PROVIDER</name>
+            <name>PRODUCTION_ORDER</name>
+            <schemaName>SC_PRENDAS</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>LINE_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>PRODUCTION_ORDER</name>
             <schemaName>SC_PRENDAS</schemaName>
             <type>TABLE</type>
           </parent>
@@ -125,35 +146,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PROVIDER_PK</name>
+        <name>LINE_REQUEST_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROVIDER</name>
-          <schemaName>SC_PRENDAS</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SC_PRENDAS</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
-    </constraint>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>RAWMATERIAL_PROVIDER_FK2</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>RAW_MATERIAL</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>RAWMATERIAL_PROVIDER</name>
-            <schemaName>SC_PRENDAS</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SC_PRENDAS</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>RAW_MATERIAL_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>RAW_MATERIAL</name>
+          <name>LINE_REQUEST</name>
           <schemaName>SC_PRENDAS</schemaName>
           <type>TABLE</type>
         </parent>
@@ -164,14 +159,10 @@
   </constraints>
   <indexes>
     <index>
-      <name>RAWMATERIAL_PROVIDER_PK</name>
+      <name>PRODUCTION_ORDER_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>PROVIDER</expressionSource>
-          <orderType>ASC</orderType>
-        </columnExpression>
-        <columnExpression>
-          <expressionSource>RAW_MATERIAL</expressionSource>
+          <expressionSource>ID</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
@@ -183,20 +174,6 @@
     </index>
   </indexes>
   <properties>
-    <entry>
-      <key>OracleStorageProperties</key>
-      <value class="oracle.javatools.db.ora.OracleStorageProperties">
-        <freelistGroups>2</freelistGroups>
-        <freelists>2</freelists>
-        <initialExtent>960000</initialExtent>
-        <initrans>1</initrans>
-        <minExtent>1</minExtent>
-        <nextExtent>960000</nextExtent>
-        <percentFree>5</percentFree>
-        <percentIncrease>0</percentIncrease>
-        <percentUsed>90</percentUsed>
-      </value>
-    </entry>
     <entry>
       <key>TableType</key>
       <value class="oracle.javatools.db.Table$TableType">NORMAL</value>

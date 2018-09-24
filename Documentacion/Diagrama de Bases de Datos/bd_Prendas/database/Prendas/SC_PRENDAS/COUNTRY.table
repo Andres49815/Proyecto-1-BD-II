@@ -1,6 +1,6 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>PURCHASE_ORDER</name>
+  <name>COUNTRY</name>
   <columns>
     <column>
       <name>ID</name>
@@ -9,54 +9,44 @@
           <typeName>INT</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <identityProperties>
-        <generated>ALWAYS</generated>
-        <incrementBy>1</incrementBy>
-        <maxValue>1000000</maxValue>
-        <minValue>0</minValue>
-        <startWith>0</startWith>
-      </identityProperties>
-      <notNull>true</notNull>
-    </column>
-    <column>
-      <name>ORDER_DATE</name>
-      <dataTypeUsage>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>DATE</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
       <notNull>true</notNull>
       <properties>
         <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">Fecha en que se emite la orden</value>
+          <key>ColumnSequenceExpander.TriggerNullCheck</key>
+          <value class="java.lang.Boolean">true</value>
         </entry>
       </properties>
     </column>
     <column>
-      <name>PROVIDER</name>
+      <name>NAME</name>
       <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>INT</typeName>
+          <typeName>VARCHAR2</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
       <properties>
         <entry>
           <key>Comment</key>
-          <value class="java.lang.String">Proveedor a quien se le compra</value>
+          <value class="java.lang.String">Nombre del pais</value>
         </entry>
       </properties>
     </column>
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PURCHASE_ORDER_PK</name>
+      <name>COUNTRY_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>PURCHASE_ORDER</name>
+            <name>COUNTRY</name>
             <schemaName>SC_PRENDAS</schemaName>
             <type>TABLE</type>
           </parent>
@@ -66,9 +56,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>PURCHASE_ORDER_PK</name>
+        <name>COUNTRY_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>PURCHASE_ORDER</name>
+          <name>COUNTRY</name>
           <schemaName>SC_PRENDAS</schemaName>
           <type>TABLE</type>
         </parent>
@@ -76,36 +66,10 @@
         <type>INDEX</type>
       </indexID>
     </constraint>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>PURCHASE_ORDER_PROVIDER_FK</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>PROVIDER</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>PURCHASE_ORDER</name>
-            <schemaName>SC_PRENDAS</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SC_PRENDAS</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PROVIDER_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROVIDER</name>
-          <schemaName>SC_PRENDAS</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SC_PRENDAS</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
-    </constraint>
   </constraints>
   <indexes>
     <index>
-      <name>PURCHASE_ORDER_PK</name>
+      <name>COUNTRY_PK</name>
       <columnExpressions>
         <columnExpression>
           <expressionSource>ID</expressionSource>
@@ -123,16 +87,14 @@
     <entry>
       <key>OracleStorageProperties</key>
       <value class="oracle.javatools.db.ora.OracleStorageProperties">
-        <freelistGroups>3</freelistGroups>
-        <freelists>3</freelists>
-        <initialExtent>13000</initialExtent>
+        <initialExtent>1200</initialExtent>
         <initrans>1</initrans>
         <maxExtent>0</maxExtent>
         <minExtent>1</minExtent>
-        <nextExtent>13000</nextExtent>
-        <percentFree>0</percentFree>
+        <nextExtent>1200</nextExtent>
+        <percentFree>20</percentFree>
         <percentIncrease>0</percentIncrease>
-        <percentUsed>90</percentUsed>
+        <percentUsed>70</percentUsed>
       </value>
     </entry>
     <entry>

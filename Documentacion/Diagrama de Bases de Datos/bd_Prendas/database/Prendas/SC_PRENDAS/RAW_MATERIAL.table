@@ -156,14 +156,14 @@
       <value class="oracle.javatools.db.ora.OracleStorageProperties">
         <freelistGroups>3</freelistGroups>
         <freelists>3</freelists>
-        <initialExtent>1100000</initialExtent>
+        <initialExtent>1700000</initialExtent>
         <initrans>1</initrans>
         <maxExtent>0</maxExtent>
         <minExtent>1</minExtent>
-        <nextExtent>100000</nextExtent>
-        <percentFree>10</percentFree>
+        <nextExtent>1700000</nextExtent>
+        <percentFree>20</percentFree>
         <percentIncrease>10</percentIncrease>
-        <percentUsed>75</percentUsed>
+        <percentUsed>70</percentUsed>
       </value>
     </entry>
     <entry>

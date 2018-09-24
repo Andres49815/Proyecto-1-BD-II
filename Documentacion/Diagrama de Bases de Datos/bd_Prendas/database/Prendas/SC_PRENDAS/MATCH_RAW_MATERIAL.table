@@ -1,61 +1,69 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>NATIONAL_PROVIDER</name>
+  <name>MATCH_RAW_MATERIAL</name>
   <columns>
     <column>
-      <name>ID</name>
-      <dataTypeUsage>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>INT</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-    </column>
-    <column>
-      <name>IDENTIFICATION_NUMBER</name>
+      <name>RAW_MATERIAL</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
-            <key>precision</key>
-            <value class="java.lang.String">11</value>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>NUMBER</typeName>
+          <typeName>VARCHAR2</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
-      <properties>
-        <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">Cedula</value>
-        </entry>
-      </properties>
     </column>
     <column>
-      <name>MAX_DAYS</name>
+      <name>PROVIDER</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>INT</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
-      <properties>
-        <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">Pais</value>
-        </entry>
-      </properties>
+    </column>
+    <column>
+      <name>SYS_RAW_MATERIAL</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>INT</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
     </column>
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>NATIONAL_PROVIDER_PK</name>
+      <name>MATCH_RAW_MATERIAL_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID</name>
+          <name>SYS_RAW_MATERIAL</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>NATIONAL_PROVIDER</name>
+            <name>MATCH_RAW_MATERIAL</name>
+            <schemaName>SC_PRENDAS</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>RAW_MATERIAL</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>MATCH_RAW_MATERIAL</name>
+            <schemaName>SC_PRENDAS</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>PROVIDER</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>MATCH_RAW_MATERIAL</name>
             <schemaName>SC_PRENDAS</schemaName>
             <type>TABLE</type>
           </parent>
@@ -65,35 +73,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>NATIONAL_PROVIDER_PK</name>
+        <name>MATCH_RAW_MATERIAL_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>NATIONAL_PROVIDER</name>
-          <schemaName>SC_PRENDAS</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SC_PRENDAS</schemaName>
-        <type>INDEX</type>
-      </indexID>
-    </constraint>
-    <constraint class="oracle.javatools.db.UniqueConstraint">
-      <name>NATIONAL_PROVIDER_UK</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>IDENTIFICATION_NUMBER</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>NATIONAL_PROVIDER</name>
-            <schemaName>SC_PRENDAS</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SC_PRENDAS</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>NATIONAL_PROVIDER_UK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>NATIONAL_PROVIDER</name>
+          <name>MATCH_RAW_MATERIAL</name>
           <schemaName>SC_PRENDAS</schemaName>
           <type>TABLE</type>
         </parent>
@@ -102,12 +84,22 @@
       </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>NATIONAL_PROVIDER_FK</name>
+      <name>MATCH_RAW_MATERIAL_FK1</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID</name>
+          <name>RAW_MATERIAL</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>NATIONAL_PROVIDER</name>
+            <name>MATCH_RAW_MATERIAL</name>
+            <schemaName>SC_PRENDAS</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>PROVIDER</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>MATCH_RAW_MATERIAL</name>
             <schemaName>SC_PRENDAS</schemaName>
             <type>TABLE</type>
           </parent>
@@ -117,9 +109,35 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PROVIDER_PK</name>
+        <name>RAW_MATERIAL_PRV_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROVIDER</name>
+          <name>RAW_MATERIAL_PRV</name>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SC_PRENDAS</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>MATCH_RAW_MATERIAL_FK2</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>SYS_RAW_MATERIAL</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>MATCH_RAW_MATERIAL</name>
+            <schemaName>SC_PRENDAS</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>RAW_MATERIAL_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>RAW_MATERIAL</name>
           <schemaName>SC_PRENDAS</schemaName>
           <type>TABLE</type>
         </parent>
@@ -130,24 +148,18 @@
   </constraints>
   <indexes>
     <index>
-      <name>NATIONAL_PROVIDER_PK</name>
+      <name>MATCH_RAW_MATERIAL_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>ID</expressionSource>
+          <expressionSource>SYS_RAW_MATERIAL</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
-      </columnExpressions>
-      <indexType>UNIQUE</indexType>
-      <schema>
-        <name>SC_PRENDAS</name>
-      </schema>
-      <systemGenerated>true</systemGenerated>
-    </index>
-    <index>
-      <name>NATIONAL_PROVIDER_UK</name>
-      <columnExpressions>
         <columnExpression>
-          <expressionSource>IDENTIFICATION_NUMBER</expressionSource>
+          <expressionSource>RAW_MATERIAL</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+        <columnExpression>
+          <expressionSource>PROVIDER</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
@@ -162,12 +174,13 @@
     <entry>
       <key>OracleStorageProperties</key>
       <value class="oracle.javatools.db.ora.OracleStorageProperties">
-        <initialExtent>1400</initialExtent>
+        <initialExtent>2800</initialExtent>
+        <initrans>1</initrans>
         <minExtent>1</minExtent>
-        <nextExtent>1400</nextExtent>
-        <percentFree>7</percentFree>
+        <nextExtent>2800</nextExtent>
+        <percentFree>20</percentFree>
         <percentIncrease>0</percentIncrease>
-        <percentUsed>83</percentUsed>
+        <percentUsed>70</percentUsed>
       </value>
     </entry>
     <entry>

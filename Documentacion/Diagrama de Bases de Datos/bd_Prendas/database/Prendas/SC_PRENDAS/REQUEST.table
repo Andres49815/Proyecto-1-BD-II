@@ -26,6 +26,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Cliente que realiza la solicitud</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>REQUEST_DATE</name>
@@ -35,6 +41,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en la que la solicitud es realizada</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>DELIVER_DATE</name>
@@ -44,6 +56,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha maxima en la que se debe entregar la solicitud</value>
+        </entry>
+      </properties>
     </column>
   </columns>
   <constraints>
@@ -122,13 +140,13 @@
       <value class="oracle.javatools.db.ora.OracleStorageProperties">
         <freelistGroups>2</freelistGroups>
         <freelists>2</freelists>
-        <initialExtent>1320000</initialExtent>
+        <initialExtent>2640000</initialExtent>
         <initrans>1</initrans>
         <minExtent>1</minExtent>
-        <nextExtent>1320000</nextExtent>
-        <percentFree>20</percentFree>
+        <nextExtent>2640000</nextExtent>
+        <percentFree>0</percentFree>
         <percentIncrease>0</percentIncrease>
-        <percentUsed>65</percentUsed>
+        <percentUsed>90</percentUsed>
       </value>
     </entry>
     <entry>

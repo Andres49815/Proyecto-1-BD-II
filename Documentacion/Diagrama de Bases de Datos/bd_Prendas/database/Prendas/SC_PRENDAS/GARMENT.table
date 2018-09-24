@@ -84,6 +84,15 @@
         </entry>
       </properties>
     </column>
+    <column>
+      <name>STYLE</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>INT</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
@@ -112,6 +121,32 @@
         <type>INDEX</type>
       </indexID>
     </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>GARMENT_STYLE_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>STYLE</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>GARMENT</name>
+            <schemaName>SC_PRENDAS</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>STYLE_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>STYLE</name>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SC_PRENDAS</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
   </constraints>
   <indexes>
     <index>
@@ -139,13 +174,13 @@
       <value class="oracle.javatools.db.ora.OracleStorageProperties">
         <freelistGroups>2</freelistGroups>
         <freelists>2</freelists>
-        <initialExtent>176000</initialExtent>
+        <initialExtent>530000</initialExtent>
         <initrans>1</initrans>
         <minExtent>1</minExtent>
-        <nextExtent>176000</nextExtent>
-        <percentFree>30</percentFree>
+        <nextExtent>530000</nextExtent>
+        <percentFree>22</percentFree>
         <percentIncrease>0</percentIncrease>
-        <percentUsed>60</percentUsed>
+        <percentUsed>70</percentUsed>
       </value>
     </entry>
     <entry>

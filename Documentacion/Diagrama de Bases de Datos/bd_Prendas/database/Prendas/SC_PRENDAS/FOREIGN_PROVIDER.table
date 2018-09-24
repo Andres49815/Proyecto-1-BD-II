@@ -55,32 +55,6 @@
     </column>
   </columns>
   <constraints>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FOREIGN_PROVIDER_PROVIDER_FK</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>PROVIDER</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>FOREIGN_PROVIDER</name>
-            <schemaName>SC_PRENDAS</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SC_PRENDAS</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PROVIDER_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROVIDER</name>
-          <schemaName>SC_PRENDAS</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SC_PRENDAS</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
-    </constraint>
     <constraint class="oracle.javatools.db.PKConstraint">
       <name>FOREIGN_PROVIDER_PK</name>
       <columnIDs>
@@ -107,6 +81,32 @@
         <type>INDEX</type>
       </indexID>
     </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>FOREIGN_PROVIDER_PROVIDER_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>PROVIDER</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>FOREIGN_PROVIDER</name>
+            <schemaName>SC_PRENDAS</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>PROVIDER_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>PROVIDER</name>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SC_PRENDAS</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
   </constraints>
   <indexes>
     <index>
@@ -125,6 +125,18 @@
     </index>
   </indexes>
   <properties>
+    <entry>
+      <key>OracleStorageProperties</key>
+      <value class="oracle.javatools.db.ora.OracleStorageProperties">
+        <initialExtent>4300</initialExtent>
+        <initrans>1</initrans>
+        <minExtent>1</minExtent>
+        <nextExtent>4300</nextExtent>
+        <percentFree>25</percentFree>
+        <percentIncrease>0</percentIncrease>
+        <percentUsed>65</percentUsed>
+      </value>
+    </entry>
     <entry>
       <key>TableType</key>
       <value class="oracle.javatools.db.Table$TableType">NORMAL</value>

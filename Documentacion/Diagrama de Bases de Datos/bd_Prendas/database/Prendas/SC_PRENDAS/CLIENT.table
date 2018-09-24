@@ -19,21 +19,6 @@
       <notNull>true</notNull>
     </column>
     <column>
-      <name>COUNTRY</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>size</key>
-            <value class="java.lang.Long">20</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-    </column>
-    <column>
       <name>ID_NUMBER</name>
       <dataTypeUsage>
         <attributeValues>
@@ -47,6 +32,31 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Numero de cedula del cliente</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>COUNTRY</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>INT</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>ColumnSequenceExpander.TriggerNullCheck</key>
+          <value class="java.lang.Boolean">true</value>
+        </entry>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Pais del cual es residente</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>NAME</name>
@@ -62,6 +72,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Nombre del cliente</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>LASTNAME</name>
@@ -77,6 +93,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Apellido del cliente</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>DIRECTION</name>
@@ -92,6 +114,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Direccion donde vive el cliente</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>EMAIL</name>
@@ -107,6 +135,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Correo electronico del cliente</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>PHONE</name>
@@ -122,6 +156,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Telefono del cliente</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>PAYMENT_DIRECTION</name>
@@ -137,6 +177,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Direccion de pago del cliente</value>
+        </entry>
+      </properties>
     </column>
   </columns>
   <constraints>
@@ -166,6 +212,32 @@
         <type>INDEX</type>
       </indexID>
     </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>CLIENT_COUNTRY_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>COUNTRY</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>CLIENT</name>
+            <schemaName>SC_PRENDAS</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>COUNTRY_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>COUNTRY</name>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SC_PRENDAS</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
   </constraints>
   <indexes>
     <index>
@@ -189,13 +261,14 @@
       <value class="oracle.javatools.db.ora.OracleStorageProperties">
         <freelistGroups>2</freelistGroups>
         <freelists>2</freelists>
-        <initialExtent>455000</initialExtent>
+        <initialExtent>740000</initialExtent>
         <initrans>1</initrans>
+        <maxExtent>0</maxExtent>
         <minExtent>1</minExtent>
-        <nextExtent>5000</nextExtent>
+        <nextExtent>740000</nextExtent>
         <percentFree>30</percentFree>
         <percentIncrease>0</percentIncrease>
-        <percentUsed>55</percentUsed>
+        <percentUsed>60</percentUsed>
       </value>
     </entry>
     <entry>

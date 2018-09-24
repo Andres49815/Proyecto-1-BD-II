@@ -1,6 +1,6 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>PURCHASE_ORDER</name>
+  <name>GARMENT_SIZE</name>
   <columns>
     <column>
       <name>ID</name>
@@ -12,51 +12,42 @@
       <identityProperties>
         <generated>ALWAYS</generated>
         <incrementBy>1</incrementBy>
-        <maxValue>1000000</maxValue>
+        <maxValue>10000000</maxValue>
         <minValue>0</minValue>
         <startWith>0</startWith>
       </identityProperties>
       <notNull>true</notNull>
     </column>
     <column>
-      <name>ORDER_DATE</name>
+      <name>GARMENT_SIZE</name>
       <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">3</value>
+          </entry>
+        </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>DATE</typeName>
+          <typeName>VARCHAR2</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
       <properties>
         <entry>
           <key>Comment</key>
-          <value class="java.lang.String">Fecha en que se emite la orden</value>
-        </entry>
-      </properties>
-    </column>
-    <column>
-      <name>PROVIDER</name>
-      <dataTypeUsage>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>INT</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-      <properties>
-        <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">Proveedor a quien se le compra</value>
+          <value class="java.lang.String">Talla que puede ser asignada a una prenda</value>
         </entry>
       </properties>
     </column>
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PURCHASE_ORDER_PK</name>
+      <name>RECIPE_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>PURCHASE_ORDER</name>
+            <name>GARMENT_SIZE</name>
             <schemaName>SC_PRENDAS</schemaName>
             <type>TABLE</type>
           </parent>
@@ -66,9 +57,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>PURCHASE_ORDER_PK</name>
+        <name>RECIPE_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>PURCHASE_ORDER</name>
+          <name>GARMENT_SIZE</name>
           <schemaName>SC_PRENDAS</schemaName>
           <type>TABLE</type>
         </parent>
@@ -76,36 +67,15 @@
         <type>INDEX</type>
       </indexID>
     </constraint>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>PURCHASE_ORDER_PROVIDER_FK</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>PROVIDER</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>PURCHASE_ORDER</name>
-            <schemaName>SC_PRENDAS</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SC_PRENDAS</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>GARMENT_SIZE_CK</name>
+      <checkCondition>GARMENT_SIZE = &apos;S&apos; OR GARMENT_SIZE = &apos;M&apos; OR GARMENT_SIZE = &apos;L&apos; OR GARMENT_SIZE = &apos;XXL&apos;</checkCondition>
       <enabled>true</enabled>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PROVIDER_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROVIDER</name>
-          <schemaName>SC_PRENDAS</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SC_PRENDAS</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
     </constraint>
   </constraints>
   <indexes>
     <index>
-      <name>PURCHASE_ORDER_PK</name>
+      <name>RECIPE_PK</name>
       <columnExpressions>
         <columnExpression>
           <expressionSource>ID</expressionSource>
@@ -121,18 +91,19 @@
   </indexes>
   <properties>
     <entry>
+      <key>Comment</key>
+      <value class="java.lang.String">Tamano que una prenda puede tener (S, M, L, XL, XXL)</value>
+    </entry>
+    <entry>
       <key>OracleStorageProperties</key>
       <value class="oracle.javatools.db.ora.OracleStorageProperties">
-        <freelistGroups>3</freelistGroups>
-        <freelists>3</freelists>
-        <initialExtent>13000</initialExtent>
+        <initialExtent>21</initialExtent>
         <initrans>1</initrans>
-        <maxExtent>0</maxExtent>
         <minExtent>1</minExtent>
-        <nextExtent>13000</nextExtent>
-        <percentFree>0</percentFree>
+        <nextExtent>15</nextExtent>
+        <percentFree>10</percentFree>
         <percentIncrease>0</percentIncrease>
-        <percentUsed>90</percentUsed>
+        <percentUsed>85</percentUsed>
       </value>
     </entry>
     <entry>

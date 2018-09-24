@@ -1,6 +1,6 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>RECIPE</name>
+  <name>ORDER_QUEUE</name>
   <columns>
     <column>
       <name>ID</name>
@@ -12,72 +12,39 @@
       <identityProperties>
         <generated>ALWAYS</generated>
         <incrementBy>1</incrementBy>
-        <maxValue>10000000</maxValue>
+        <maxValue>1000000</maxValue>
         <minValue>0</minValue>
         <startWith>0</startWith>
       </identityProperties>
       <notNull>true</notNull>
     </column>
     <column>
-      <name>GARMENT</name>
+      <name>PRODUCTION_ORDER</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>INT</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
-      <properties>
-        <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">Prenda</value>
-        </entry>
-      </properties>
     </column>
     <column>
-      <name>STYLE</name>
+      <name>QUANTITY_NEEDED</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>INT</typeName>
+          <typeName>DOUBLE PRECISION</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
-      <properties>
-        <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">Estilo</value>
-        </entry>
-      </properties>
-    </column>
-    <column>
-      <name>GARMENT_SIZE</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>size</key>
-            <value class="java.lang.Long">3</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-      <properties>
-        <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">Talla</value>
-        </entry>
-      </properties>
     </column>
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>RECIPE_PK</name>
+      <name>ORDER_QUEUE_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>RECIPE</name>
+            <name>ORDER_QUEUE</name>
             <schemaName>SC_PRENDAS</schemaName>
             <type>TABLE</type>
           </parent>
@@ -87,9 +54,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>RECIPE_PK</name>
+        <name>ORDER_QUEUE_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>RECIPE</name>
+          <name>ORDER_QUEUE</name>
           <schemaName>SC_PRENDAS</schemaName>
           <type>TABLE</type>
         </parent>
@@ -98,12 +65,12 @@
       </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>RECIPE_GARMENT_FK</name>
+      <name>ORDER_QUEUE_FK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>GARMENT</name>
+          <name>PRODUCTION_ORDER</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>RECIPE</name>
+            <name>ORDER_QUEUE</name>
             <schemaName>SC_PRENDAS</schemaName>
             <type>TABLE</type>
           </parent>
@@ -113,51 +80,20 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>GARMENT_PK</name>
+        <name>PURCHASE_ORDER_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>GARMENT</name>
+          <name>PURCHASE_ORDER</name>
           <schemaName>SC_PRENDAS</schemaName>
           <type>TABLE</type>
         </parent>
         <schemaName>SC_PRENDAS</schemaName>
         <type>CONSTRAINT</type>
       </referenceID>
-    </constraint>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>RECIPE_STYLE_FK</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>STYLE</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>RECIPE</name>
-            <schemaName>SC_PRENDAS</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SC_PRENDAS</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>STYLE_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>STYLE</name>
-          <schemaName>SC_PRENDAS</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SC_PRENDAS</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
-    </constraint>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>GARMENT_SIZE_CK</name>
-      <checkCondition>GARMENT_SIZE = &apos;S&apos; OR GARMENT_SIZE = &apos;M&apos; OR GARMENT_SIZE = &apos;L&apos; OR GARMENT_SIZE = &apos;XXL&apos;</checkCondition>
-      <enabled>true</enabled>
     </constraint>
   </constraints>
   <indexes>
     <index>
-      <name>RECIPE_PK</name>
+      <name>ORDER_QUEUE_PK</name>
       <columnExpressions>
         <columnExpression>
           <expressionSource>ID</expressionSource>
@@ -175,15 +111,12 @@
     <entry>
       <key>OracleStorageProperties</key>
       <value class="oracle.javatools.db.ora.OracleStorageProperties">
-        <freelistGroups>2</freelistGroups>
-        <freelists>2</freelists>
-        <initialExtent>600000</initialExtent>
-        <initrans>1</initrans>
+        <initialExtent>1350</initialExtent>
         <minExtent>1</minExtent>
-        <nextExtent>600000</nextExtent>
-        <percentFree>10</percentFree>
+        <nextExtent>1350</nextExtent>
+        <percentFree>0</percentFree>
         <percentIncrease>0</percentIncrease>
-        <percentUsed>85</percentUsed>
+        <percentUsed>90</percentUsed>
       </value>
     </entry>
     <entry>
