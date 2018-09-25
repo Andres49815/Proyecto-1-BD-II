@@ -26,6 +26,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Orden de produccion en cola</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>QUANTITY_NEEDED</name>
@@ -35,6 +41,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Cantidad necesaria</value>
+        </entry>
+      </properties>
     </column>
   </columns>
   <constraints>
