@@ -16,6 +16,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Nombre del material en el sistema del proveedor</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>PROVIDER</name>
@@ -25,6 +31,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Proveedor que provee  el material</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>SYS_RAW_MATERIAL</name>
@@ -34,6 +46,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Nombre del material en el sistema interno</value>
+        </entry>
+      </properties>
     </column>
   </columns>
   <constraints>

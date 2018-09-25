@@ -92,6 +92,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Estilo de la prenda</value>
+        </entry>
+      </properties>
     </column>
   </columns>
   <constraints>
