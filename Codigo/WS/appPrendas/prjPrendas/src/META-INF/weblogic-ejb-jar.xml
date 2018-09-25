@@ -6,8 +6,4 @@
     <ejb-name>garmentEJB</ejb-name>
     <stateless-session-descriptor/>
   </weblogic-enterprise-bean>
-  <weblogic-enterprise-bean>
-    <ejb-name>providerEJB</ejb-name>
-    <stateless-session-descriptor/>
-  </weblogic-enterprise-bean>
 </weblogic-ejb-jar>

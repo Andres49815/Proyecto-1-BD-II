@@ -70,6 +70,7 @@
    </list>
    <value n="defaultPackage" v="prjprendas"/>
    <hash n="ejbModuleContainer">
+      <value n="dbConnection" v="grupo07"/>
       <value n="ejbMetaDataPrefs" v="PREFASANNON"/>
       <value n="ejbVersion" v="3.0"/>
       <value n="ejbVersionMinor" v="0.1"/>
@@ -149,7 +150,7 @@
          <value n="jpa-version" v="2.0"/>
          <hash n="src$META-INF$persistence.xml">
             <hash n="Garment">
-               <value n="development-database" v="DATABASE1"/>
+               <value n="development-database" v="grupo07"/>
             </hash>
          </hash>
       </hash>
