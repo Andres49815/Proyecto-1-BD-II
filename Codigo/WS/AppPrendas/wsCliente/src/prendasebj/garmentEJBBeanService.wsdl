@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions targetNamespace="http://prendasEBJ/" name="garmentEJBBeanService" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:tns="http://prendasEBJ/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://prendasEBJ/" schemaLocation="garmentEJBBeanService_schema1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="getConnection">
+    <part name="parameters" element="tns:getConnection"/>
+  </message>
+  <message name="getConnectionResponse">
+    <part name="parameters" element="tns:getConnectionResponse"/>
+  </message>
+  <message name="commit">
+    <part name="parameters" element="tns:commit"/>
+  </message>
+  <message name="commitResponse">
+    <part name="parameters" element="tns:commitResponse"/>
+  </message>
+  <message name="closeConexion">
+    <part name="parameters" element="tns:closeConexion"/>
+  </message>
+  <message name="closeConexionResponse">
+    <part name="parameters" element="tns:closeConexionResponse"/>
+  </message>
+  <message name="insertGarment">
+    <part name="parameters" element="tns:insertGarment"/>
+  </message>
+  <message name="insertGarmentResponse">
+    <part name="parameters" element="tns:insertGarmentResponse"/>
+  </message>
+  <message name="updateGarment">
+    <part name="parameters" element="tns:updateGarment"/>
+  </message>
+  <message name="updateGarmentResponse">
+    <part name="parameters" element="tns:updateGarmentResponse"/>
+  </message>
+  <message name="removeGarment">
+    <part name="parameters" element="tns:removeGarment"/>
+  </message>
+  <message name="removeGarmentResponse">
+    <part name="parameters" element="tns:removeGarmentResponse"/>
+  </message>
+  <message name="getGarments">
+    <part name="parameters" element="tns:getGarments"/>
+  </message>
+  <message name="getGarmentsResponse">
+    <part name="parameters" element="tns:getGarmentsResponse"/>
+  </message>
+  <portType name="garmentEJBBean">
+    <operation name="getConnection">
+      <input wsam:Action="http://prendasEBJ/garmentEJBBean/getConnectionRequest" message="tns:getConnection"/>
+      <output wsam:Action="http://prendasEBJ/garmentEJBBean/getConnectionResponse" message="tns:getConnectionResponse"/>
+    </operation>
+    <operation name="commit">
+      <input wsam:Action="http://prendasEBJ/garmentEJBBean/commitRequest" message="tns:commit"/>
+      <output wsam:Action="http://prendasEBJ/garmentEJBBean/commitResponse" message="tns:commitResponse"/>
+    </operation>
+    <operation name="closeConexion">
+      <input wsam:Action="http://prendasEBJ/garmentEJBBean/closeConexionRequest" message="tns:closeConexion"/>
+      <output wsam:Action="http://prendasEBJ/garmentEJBBean/closeConexionResponse" message="tns:closeConexionResponse"/>
+    </operation>
+    <operation name="insertGarment">
+      <input wsam:Action="http://prendasEBJ/garmentEJBBean/insertGarmentRequest" message="tns:insertGarment"/>
+      <output wsam:Action="http://prendasEBJ/garmentEJBBean/insertGarmentResponse" message="tns:insertGarmentResponse"/>
+    </operation>
+    <operation name="updateGarment">
+      <input wsam:Action="http://prendasEBJ/garmentEJBBean/updateGarmentRequest" message="tns:updateGarment"/>
+      <output wsam:Action="http://prendasEBJ/garmentEJBBean/updateGarmentResponse" message="tns:updateGarmentResponse"/>
+    </operation>
+    <operation name="removeGarment">
+      <input wsam:Action="http://prendasEBJ/garmentEJBBean/removeGarmentRequest" message="tns:removeGarment"/>
+      <output wsam:Action="http://prendasEBJ/garmentEJBBean/removeGarmentResponse" message="tns:removeGarmentResponse"/>
+    </operation>
+    <operation name="getGarments">
+      <input wsam:Action="http://prendasEBJ/garmentEJBBean/getGarmentsRequest" message="tns:getGarments"/>
+      <output wsam:Action="http://prendasEBJ/garmentEJBBean/getGarmentsResponse" message="tns:getGarmentsResponse"/>
+    </operation>
+  </portType>
+  <binding name="garmentEJBBeanPortBinding" type="tns:garmentEJBBean">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="getConnection">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="commit">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="closeConexion">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="insertGarment">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="updateGarment">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="removeGarment">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getGarments">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="garmentEJBBeanService">
+    <port name="garmentEJBBeanPort" binding="tns:garmentEJBBeanPortBinding">
+      <soap:address location="http://localhost:7101/appPrendas-Project2-webapp/garmentEJBBeanService"/>
+    </port>
+  </service>
+</definitions>

@@ -25,6 +25,5 @@
    </list>
    <list n="listOfChildren">
       <hash><url n="URL" path="bd_Prendas/bd_Prendas.jpr"/></hash>
-      <hash><url n="URL" path="prjPrendas/prjPrendas.jpr"/></hash>
    </list>
 </jws:workspace>

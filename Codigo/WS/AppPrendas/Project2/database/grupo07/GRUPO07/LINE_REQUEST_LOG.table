@@ -1,0 +1,713 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
+  <name>LINE_REQUEST_LOG</name>
+  <columns>
+    <column>
+      <name>OLD_REQUEST_ID</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Viejo ID del REQUEST (FK)</value>
+        </entry>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>OLD_REQUEST_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>LINE_REQUEST_LOG</name>
+              <identifier class="java.math.BigDecimal">92068</identifier>
+              <schemaName>GRUPO07</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>NEW_REQUEST_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Nuevo ID del REQUEST (FK)</value>
+        </entry>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>NEW_REQUEST_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>LINE_REQUEST_LOG</name>
+              <identifier class="java.math.BigDecimal">92068</identifier>
+              <schemaName>GRUPO07</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>OLD_LINE_ID</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Viejo Numero de linea en el request</value>
+        </entry>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>OLD_LINE_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>LINE_REQUEST_LOG</name>
+              <identifier class="java.math.BigDecimal">92068</identifier>
+              <schemaName>GRUPO07</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>NEW_LINE_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Nuevo Numero de linea en el request</value>
+        </entry>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>NEW_LINE_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>LINE_REQUEST_LOG</name>
+              <identifier class="java.math.BigDecimal">92068</identifier>
+              <schemaName>GRUPO07</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>OLD_GARMENT</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Vieja Prenda (con estilo) solicitada</value>
+        </entry>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>OLD_GARMENT</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>LINE_REQUEST_LOG</name>
+              <identifier class="java.math.BigDecimal">92068</identifier>
+              <schemaName>GRUPO07</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>NEW_GARMENT</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Nueva Prenda (con estilo) solicitada</value>
+        </entry>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>NEW_GARMENT</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>LINE_REQUEST_LOG</name>
+              <identifier class="java.math.BigDecimal">92068</identifier>
+              <schemaName>GRUPO07</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>OLD_GARMENT_SIZE</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Tamano de la prenda solicitada</value>
+        </entry>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>OLD_GARMENT_SIZE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>LINE_REQUEST_LOG</name>
+              <identifier class="java.math.BigDecimal">92068</identifier>
+              <schemaName>GRUPO07</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>NEW_GARMENT_SIZE</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Nuevo tamaño de la prenda solicitada</value>
+        </entry>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>NEW_GARMENT_SIZE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>LINE_REQUEST_LOG</name>
+              <identifier class="java.math.BigDecimal">92068</identifier>
+              <schemaName>GRUPO07</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>OLD_QUANTITY</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>scale</key>
+            <value class="java.lang.Long">0</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Vieja cantidad de elementos de la prenda en la linea</value>
+        </entry>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>OLD_QUANTITY</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>LINE_REQUEST_LOG</name>
+              <identifier class="java.math.BigDecimal">92068</identifier>
+              <schemaName>GRUPO07</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>NEW_QUANTITY</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Nueva cantidad de elementos de la prenda en la linea</value>
+        </entry>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>NEW_QUANTITY</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>LINE_REQUEST_LOG</name>
+              <identifier class="java.math.BigDecimal">92068</identifier>
+              <schemaName>GRUPO07</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>EVENT_DATE</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>DATE</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha del cambio</value>
+        </entry>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>EVENT_DATE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>LINE_REQUEST_LOG</name>
+              <identifier class="java.math.BigDecimal">92068</identifier>
+              <schemaName>GRUPO07</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>USER_CODE</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>USER_CODE</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>LINE_REQUEST_LOG</name>
+              <identifier class="java.math.BigDecimal">92068</identifier>
+              <schemaName>GRUPO07</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>LINE_REQUEST_LOG_GARMENT_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>OLD_GARMENT</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>LINE_REQUEST_LOG</name>
+            <schemaName>GRUPO07</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>GRUPO07</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>NO_ACTION</onDeleteAction>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>LINE_REQUEST_LOG_GARMENT_FK</name>
+            <childObjectNames>
+              <childObjectName>OLD_GARMENT</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>LINE_REQUEST_LOG</name>
+              <identifier class="java.math.BigDecimal">92068</identifier>
+              <schemaName>GRUPO07</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>FKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>GARMENT_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>GARMENT</name>
+          <schemaName>GRUPO07</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>GRUPO07</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>LINE_REQUEST_LOG_GARMENT_SIZE</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>OLD_GARMENT_SIZE</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>LINE_REQUEST_LOG</name>
+            <schemaName>GRUPO07</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>GRUPO07</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>NO_ACTION</onDeleteAction>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>LINE_REQUEST_LOG_GARMENT_SIZE</name>
+            <childObjectNames>
+              <childObjectName>OLD_GARMENT_SIZE</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>LINE_REQUEST_LOG</name>
+              <identifier class="java.math.BigDecimal">92068</identifier>
+              <schemaName>GRUPO07</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>FKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>RECIPE_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>GARMENT_SIZE</name>
+          <schemaName>GRUPO07</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>GRUPO07</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>LINE_REQUEST_LOG_REQUEST_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>OLD_REQUEST_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>LINE_REQUEST_LOG</name>
+            <schemaName>GRUPO07</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>GRUPO07</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>NO_ACTION</onDeleteAction>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>LINE_REQUEST_LOG_REQUEST_FK</name>
+            <childObjectNames>
+              <childObjectName>OLD_REQUEST_ID</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>LINE_REQUEST_LOG</name>
+              <identifier class="java.math.BigDecimal">92068</identifier>
+              <schemaName>GRUPO07</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>FKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>REQUEST_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>REQUEST</name>
+          <schemaName>GRUPO07</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>GRUPO07</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>LINE_REQUEST_LOG_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>OLD_REQUEST_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>LINE_REQUEST_LOG</name>
+            <schemaName>GRUPO07</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>GRUPO07</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>OLD_LINE_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>LINE_REQUEST_LOG</name>
+            <schemaName>GRUPO07</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>GRUPO07</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>LINE_REQUEST_LOG_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>LINE_REQUEST_LOG</name>
+          <schemaName>GRUPO07</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>GRUPO07</schemaName>
+        <type>INDEX</type>
+      </indexID>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>LINE_REQUEST_LOG_PK</name>
+            <childObjectNames>
+              <childObjectName>OLD_REQUEST_ID</childObjectName>
+              <childObjectName>OLD_LINE_ID</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>LINE_REQUEST_LOG</name>
+              <identifier class="java.math.BigDecimal">92068</identifier>
+              <schemaName>GRUPO07</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>PKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+  </constraints>
+  <indexes>
+    <index>
+      <name>LINE_REQUEST_LOG_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>OLD_REQUEST_ID</expressionSource>
+          <orderType>ASC</orderType>
+          <properties>
+            <entry>
+              <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+              <value class="oracle.javatools.db.ReferenceID">
+                <name>OLD_REQUEST_ID</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>LINE_REQUEST_LOG_PK</name>
+                  <identifier class="java.math.BigDecimal">92070</identifier>
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>LINE_REQUEST_LOG</name>
+                    <identifier class="java.math.BigDecimal">92068</identifier>
+                    <schemaName>GRUPO07</schemaName>
+                    <type>TABLE</type>
+                  </parent>
+                  <schemaName>GRUPO07</schemaName>
+                  <type>INDEX</type>
+                </parent>
+                <type>IndexObject</type>
+              </value>
+            </entry>
+          </properties>
+        </columnExpression>
+        <columnExpression>
+          <expressionSource>OLD_LINE_ID</expressionSource>
+          <orderType>ASC</orderType>
+          <properties>
+            <entry>
+              <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+              <value class="oracle.javatools.db.ReferenceID">
+                <name>OLD_LINE_ID</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>LINE_REQUEST_LOG_PK</name>
+                  <identifier class="java.math.BigDecimal">92070</identifier>
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>LINE_REQUEST_LOG</name>
+                    <identifier class="java.math.BigDecimal">92068</identifier>
+                    <schemaName>GRUPO07</schemaName>
+                    <type>TABLE</type>
+                  </parent>
+                  <schemaName>GRUPO07</schemaName>
+                  <type>INDEX</type>
+                </parent>
+                <type>IndexObject</type>
+              </value>
+            </entry>
+          </properties>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>LINE_REQUEST_LOG_PK</name>
+            <identifier class="java.math.BigDecimal">92070</identifier>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>LINE_REQUEST_LOG</name>
+              <identifier class="java.math.BigDecimal">92068</identifier>
+              <schemaName>GRUPO07</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>GRUPO07</schemaName>
+            <type>INDEX</type>
+          </value>
+        </entry>
+        <entry>
+          <key>OracleStorageProperties</key>
+          <value class="oracle.javatools.db.ora.OracleStorageProperties">
+            <bufferMode>DEFAULT</bufferMode>
+            <initrans>2</initrans>
+            <logging>true</logging>
+            <percentFree>10</percentFree>
+            <tablespaceID class="oracle.javatools.db.ReferenceID">
+              <name>SYSTEM</name>
+              <type>TABLESPACE</type>
+            </tablespaceID>
+          </value>
+        </entry>
+      </properties>
+      <reverse>false</reverse>
+      <schema>
+        <name>GRUPO07</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+  </indexes>
+  <properties>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</key>
+      <value class="java.lang.String">grupo07</value>
+    </entry>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+      <value class="oracle.javatools.db.ReferenceID">
+        <name>LINE_REQUEST_LOG</name>
+        <identifier class="java.math.BigDecimal">92068</identifier>
+        <schemaName>GRUPO07</schemaName>
+        <type>TABLE</type>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleInMemoryProperties</key>
+      <value class="oracle.javatools.db.ora.OracleInMemoryProperties">
+        <inMemory>false</inMemory>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleStorageProperties</key>
+      <value class="oracle.javatools.db.ora.OracleStorageProperties">
+        <bufferMode>DEFAULT</bufferMode>
+        <freelistGroups>5</freelistGroups>
+        <freelists>5</freelists>
+        <initialExtent>74407936</initialExtent>
+        <initrans>1</initrans>
+        <logging>true</logging>
+        <maxExtent>0</maxExtent>
+        <minExtent>1</minExtent>
+        <nextExtent>74407936</nextExtent>
+        <percentFree>10</percentFree>
+        <percentUsed>80</percentUsed>
+        <tablespaceID class="oracle.javatools.db.ReferenceID">
+          <name>SYSTEM</name>
+          <type>TABLESPACE</type>
+        </tablespaceID>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleTableProperties</key>
+      <value class="oracle.javatools.db.ora.OracleTableProperties">
+        <parallelDegree>1</parallelDegree>
+        <tableCompression>NOCOMPRESS</tableCompression>
+      </value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>GRUPO07</name>
+  </schema>
+</table>
