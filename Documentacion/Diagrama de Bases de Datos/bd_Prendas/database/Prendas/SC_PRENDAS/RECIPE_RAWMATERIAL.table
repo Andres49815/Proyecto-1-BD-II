@@ -191,6 +191,19 @@
   </constraints>
   <indexes>
     <index>
+      <name>RECIPE_GARMENT_INDEX</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>GARMENT</expressionSource>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>NORMAL</indexType>
+      <schema>
+        <name>SC_PRENDAS</name>
+      </schema>
+      <systemGenerated>false</systemGenerated>
+    </index>
+    <index>
       <name>RECIPE_RAWMATERIAL_PK</name>
       <columnExpressions>
         <columnExpression>

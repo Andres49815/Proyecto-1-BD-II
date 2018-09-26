@@ -109,6 +109,62 @@
         <type>INDEX</type>
       </indexID>
     </constraint>
+    <constraint class="oracle.javatools.db.UniqueConstraint">
+      <name>LINE_REQUEST_UK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>REQUEST</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>LINE_REQUEST</name>
+            <schemaName>SC_PRENDAS</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>LINE_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>LINE_REQUEST</name>
+            <schemaName>SC_PRENDAS</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>GARMENT</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>LINE_REQUEST</name>
+            <schemaName>SC_PRENDAS</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>GARMENT_SIZE</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>LINE_REQUEST</name>
+            <schemaName>SC_PRENDAS</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>LINE_REQUEST_UK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>LINE_REQUEST</name>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SC_PRENDAS</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
       <name>LINE_REQUEST_GARMENT_FK</name>
       <columnIDs>
@@ -198,6 +254,32 @@
         </columnExpression>
         <columnExpression>
           <expressionSource>LINE_ID</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>SC_PRENDAS</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+    <index>
+      <name>LINE_REQUEST_UK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>REQUEST</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+        <columnExpression>
+          <expressionSource>LINE_ID</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+        <columnExpression>
+          <expressionSource>GARMENT</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+        <columnExpression>
+          <expressionSource>GARMENT_SIZE</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
