@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3563EB09-F5B7-6A5F-F9AF-A5B19B3D87D7" name="GARMENT SIZE">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<commentInRDBMS>Tamano que una prenda puede tener (S, M, L, XL, XXL)</commentInRDBMS>
+<generatorID>95BC9B2D-327F-79F1-9D04-E1272012B889</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="DAE15FB5-031C-5CC0-0140-70AF83AC13D9">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<generatorID>CDE931C8-F9B4-96D4-D715-41B1C41CAB78</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="GARMENT SIZE" id="BE517D5D-494A-AAF1-332E-ED44674D3F5D">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<commentInRDBMS>Talla que puede ser asignada a una prenda</commentInRDBMS>
+<generatorID>EBCDA398-636A-1362-863F-5C8B250D5649</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<constraintName>GARMENT_SIZE_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>AAE5D107-F072-DF56-16AB-B224191DB56A</domain>
+<checkConstraint>
+<implementationDef dbType="Oracle Database 12c" definition="GARMENT_SIZE = &apos;S&apos; OR GARMENT_SIZE = &apos;M&apos; OR GARMENT_SIZE = &apos;L&apos; OR GARMENT_SIZE = &apos;XXL&apos;"/>
+</checkConstraint>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E5B04BDE-5F22-C3F7-4C3B-5AF1344FF6A1" name="RECIPE PK">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<generatorID>1FAD520A-1C1E-86E3-8434-97E3AF439681</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>DAE15FB5-031C-5CC0-0140-70AF83AC13D9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

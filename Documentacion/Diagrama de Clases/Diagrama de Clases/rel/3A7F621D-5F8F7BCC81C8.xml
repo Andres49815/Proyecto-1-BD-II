@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" mainViewID="E906A1C1-3AA7-BD9E-4F69-98ED3A07EA62">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 00:59:23 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>3FD120B5-9F4E-6278-D5E2-746D192C8319</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>script_definicion.sql</fileName>
+<pathName>C:\Users\Lenovo\OneDrive\TEC\Cuarto Semestre\Bases de Datos\Proyecto\Proyecto_1\Proyecto-1-BD-II\Documentacion\Definicion de la base de datos\Scripts</pathName>
+<dbType>11</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>

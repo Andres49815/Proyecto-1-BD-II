@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SegmentOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.SegmentOraclev10g" name="Storage12" directorySegmentName="seg_0" id="552E25F9-3F3C-A5E4-A254-ABF4924455E3">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<pcTFree>20</pcTFree>
+<pcTUsed>70</pcTUsed>
+<scFreeLists>3</scFreeLists>
+<scFreelistGroups>3</scFreelistGroups>
+<scInitialExtent>1700000</scInitialExtent>
+<scNextExtent>1700000</scNextExtent>
+<scPctIncrease>10</scPctIncrease>
+</SegmentOraclev10g>

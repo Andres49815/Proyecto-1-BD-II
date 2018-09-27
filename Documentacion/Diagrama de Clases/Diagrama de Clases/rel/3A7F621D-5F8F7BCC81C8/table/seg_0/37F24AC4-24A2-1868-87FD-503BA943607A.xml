@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="37F24AC4-24A2-1868-87FD-503BA943607A" name="MATCH_RAW_MATERIAL">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>BD52D1C2-546B-A194-A56F-3B8F8C335304</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="RAW_MATERIAL" id="D70FAA56-DD4B-0FBE-6113-ED7EDE6BE9A5">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Nombre del material en el sistema del proveedor</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>BAD8A94D-6BC4-F66C-7232-E811A271E933</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>68857DC2-1C90-F21C-8E32-D00ACA10C3DC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ECC55131-3BBF-ACC6-BAC0-59B0F629B3B4" referredColumn="5A63FDC2-E9C1-B02D-070C-46DF2D0974A5"/>
+</associations>
+</Column>
+<Column name="PROVIDER" id="36BC6937-C96B-6E85-1EBA-87B897EAEE9C">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Proveedor que provee  el material</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>FD7405BE-ED4F-1451-7053-1A2803E6F7EA</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ECC55131-3BBF-ACC6-BAC0-59B0F629B3B4" referredColumn="986F4677-160B-D2E6-1643-3A1A4332DDC0"/>
+</associations>
+</Column>
+<Column name="SYS_RAW_MATERIAL" id="B1F5454D-C8CC-BE5F-71B4-E788333EBF80">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Nombre del material en el sistema interno</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>0C68492F-CA9C-5859-DA18-AA82E3A4AC9A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="77885C74-5830-20EE-393C-074680B47665" referredColumn="E4D7C4E0-B627-D1DF-2C0F-672E6AFB57B0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="176E3D83-2AD3-9E6F-B202-8F33C8A82ECB" name="MATCH_RAW_MATERIAL_PK">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>33EDD0F5-2186-4D10-7A5A-64E27AB8F144</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B1F5454D-C8CC-BE5F-71B4-E788333EBF80"/>
+<colUsage columnID="D70FAA56-DD4B-0FBE-6113-ED7EDE6BE9A5"/>
+<colUsage columnID="36BC6937-C96B-6E85-1EBA-87B897EAEE9C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BFBB878D-90F5-712A-A86C-AF6751095B1D" name="MATCH_RAW_MATERIAL_FK1">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D70FAA56-DD4B-0FBE-6113-ED7EDE6BE9A5"/>
+<colUsage columnID="36BC6937-C96B-6E85-1EBA-87B897EAEE9C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="48C32F26-5866-E823-B65E-188FE6B1F1F3" name="MATCH_RAW_MATERIAL_FK2">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B1F5454D-C8CC-BE5F-71B4-E788333EBF80"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
