@@ -80,4 +80,12 @@
 <indexSort>SORTED</indexSort>
 </PrimaryKey>
 </primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="CLIENT__UN" id="56613098-99A5-B5EA-A468-5F6BBC190D5A">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 02:12:54 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
 </TableProxyOraclev12c>

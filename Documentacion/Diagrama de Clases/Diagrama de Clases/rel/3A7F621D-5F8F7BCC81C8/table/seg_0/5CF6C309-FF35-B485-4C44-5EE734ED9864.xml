@@ -13,6 +13,8 @@
 <sourceDDLFile>script_definicion.sql</sourceDDLFile>
 <createdBy>Lenovo</createdBy>
 <createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<comment>ID del cliente</comment>
+<notes>Autogenerado</notes>
 <ownerDesignName>Diagrama de Clases</ownerDesignName>
 <importedID>826DD34F-8523-14E8-4AB7-BC47F6A9F67C</importedID>
 <use>0</use>
@@ -29,7 +31,8 @@
 <sourceDDLFile>script_definicion.sql</sourceDDLFile>
 <createdBy>Lenovo</createdBy>
 <createdTime>2018-09-27 01:01:31 UTC</createdTime>
-<commentInRDBMS>Numero de cedula del cliente</commentInRDBMS>
+<commentInRDBMS>Numero de cedula del cliente.  Unica dentro de su pais</commentInRDBMS>
+<notes>No es ningun tipo de llave</notes>
 <ownerDesignName>Diagrama de Clases</ownerDesignName>
 <importedID>F7BCA03A-5406-F8F0-EB34-9AD64B8E8C86</importedID>
 <use>0</use>
@@ -42,7 +45,7 @@
 <sourceDDLFile>script_definicion.sql</sourceDDLFile>
 <createdBy>Lenovo</createdBy>
 <createdTime>2018-09-27 01:01:31 UTC</createdTime>
-<commentInRDBMS>Pais del cual es residente</commentInRDBMS>
+<commentInRDBMS>Pais del cual es residente.  FK a pais</commentInRDBMS>
 <ownerDesignName>Diagrama de Clases</ownerDesignName>
 <importedID>07F814C5-DE3C-424E-47A7-757418186D17</importedID>
 <use>0</use>
@@ -71,7 +74,7 @@
 <sourceDDLFile>script_definicion.sql</sourceDDLFile>
 <createdBy>Lenovo</createdBy>
 <createdTime>2018-09-27 01:01:31 UTC</createdTime>
-<commentInRDBMS>Apellido del cliente</commentInRDBMS>
+<commentInRDBMS>Apellido(s) del cliente</commentInRDBMS>
 <ownerDesignName>Diagrama de Clases</ownerDesignName>
 <importedID>611749D9-D51A-0281-6B17-CC57634E6AB2</importedID>
 <use>0</use>
@@ -138,6 +141,7 @@
 <sourceDDLFile>script_definicion.sql</sourceDDLFile>
 <createdBy>Lenovo</createdBy>
 <createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<notes>Usa un PK autogenerado por el sistema</notes>
 <ownerDesignName>Diagrama de Clases</ownerDesignName>
 <importedID>CBB4144C-9856-A4F9-7BC7-BE7DE6C419C1</importedID>
 <pk>true</pk>
@@ -145,6 +149,18 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="B93DFD47-F3CE-141B-8643-6DF37E06E81C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="56613098-99A5-B5EA-A468-5F6BBC190D5A" name="CLIENT__UN">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 02:12:54 UTC</createdTime>
+<notes>Sobre un mismo pais no puede haber personas con cedulas iguales</notes>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7199EFCF-DF31-02E4-6F59-3191F8FB1E0B"/>
+<colUsage columnID="295F7602-1906-E476-8309-DD8C58AF02B0"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="827D1BC3-050A-916A-2D60-FE86CC38868D" name="CLNT_COUNTRY_INDEX">
