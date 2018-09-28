@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="51C94571-99B8-E5E4-139A-B30DDB56989E" containerWithKeyObject="B409EDFD-75E7-A770-14C8-00DB287843E0" localFKIndex="93F763B5-07E5-F20B-9E7D-CA35F26EDC72" name="PRODUCTION_ORDER_FK">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>E23EACB7-0808-AB04-9AD5-E39FD7C7DF7E</importedID>
+<referredTableLongName>LINE_REQUEST</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C78A432D-A858-15F4-A908-0CBB7E1D3E50</referredTableID>
+<keyObject>3B68FACF-73C8-A641-42D9-72C026410812</keyObject>
+<referredKeyID>3B68FACF-73C8-A641-42D9-72C026410812</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>REQUEST,LINE_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

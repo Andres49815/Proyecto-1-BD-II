@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="094A8581-4E01-A905-EE55-FF369A763613" mainViewID="227DE483-510A-7BE4-0AE7-EC5E27052B48">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 00:58:21 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

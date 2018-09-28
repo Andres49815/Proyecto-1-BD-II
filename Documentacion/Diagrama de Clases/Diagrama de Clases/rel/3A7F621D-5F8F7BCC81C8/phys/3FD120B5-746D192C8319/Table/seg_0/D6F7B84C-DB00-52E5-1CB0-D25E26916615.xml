@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="GARMENT" directorySegmentName="seg_0" id="D6F7B84C-DB00-52E5-1CB0-D25E26916615">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>53ABF1D2-6682-3D60-B5A4-543DFCE17EBC</segment>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="VIDEO" id="071A3180-801F-913D-4F5F-8584AE381FB4">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DESCRIPTION" id="0BC9E0F1-934D-204C-57E1-EF68C2D581B5">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="405AABDF-C0FF-6369-941A-A2718E70AB82">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="STYLE" id="425F1538-8F83-6D8F-C106-9F4CD55E2BE3">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="IMAGE" id="96C9D409-8662-D4ED-C71D-E04DB67C66B5">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="UNIT_COST" id="E3C44641-0B43-E5E0-9A1F-4107ACF25A24">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="GARMENT_STYLE_FK" id="F2D58870-833B-7069-06CF-DC65F5E688F8">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="GARMENT_PK" id="EE6D1114-2AF2-301D-1A23-B15028A97C2A">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

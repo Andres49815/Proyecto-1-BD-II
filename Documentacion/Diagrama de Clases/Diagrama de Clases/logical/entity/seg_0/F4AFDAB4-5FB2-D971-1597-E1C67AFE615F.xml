@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F4AFDAB4-5FB2-D971-1597-E1C67AFE615F" name="NATIONAL PROVIDER">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<generatorID>11728E01-CE4D-17C3-DA43-BB53B8AE2B1E</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="CA5AEE4F-F2F9-12A4-5CA9-57A868685862">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<generatorID>7292045F-F6C4-A99E-0C22-7B9ECF4B5846</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<referedAttribute>F2F7658E-1ADD-EE2E-3A28-A0514A2F8489</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="IDENTIFICATION NUMBER" id="DA4A9689-0130-3544-9333-CC60E53A1EBA">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<commentInRDBMS>Cedula</commentInRDBMS>
+<generatorID>5E6D0796-1AD8-658F-7D87-AB49A9CF7455</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>AC61BA63-CCB0-BF83-82B2-0A87FDFFD0AB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MAX DAYS" id="86C471FD-7521-03B4-8902-B0A04E519746">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<commentInRDBMS>Pais</commentInRDBMS>
+<generatorID>13BA9BB7-05A3-7336-33DE-9C86333D2858</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="165BA980-2614-6B91-3A72-300CA5AF213A" name="NATIONAL PROVIDER PK">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<generatorID>CDE71504-FC1E-1544-7A58-57EC270CCD3D</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CA5AEE4F-F2F9-12A4-5CA9-57A868685862</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="AB09954A-4ECC-DE58-868F-53EB33554BCC" name="NATIONAL PROVIDER UK">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<generatorID>7AA5A837-D435-C32B-B1CC-69E1856D795F</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>DA4A9689-0130-3544-9333-CC60E53A1EBA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

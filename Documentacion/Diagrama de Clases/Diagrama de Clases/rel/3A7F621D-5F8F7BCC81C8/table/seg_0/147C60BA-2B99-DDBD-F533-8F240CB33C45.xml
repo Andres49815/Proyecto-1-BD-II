@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="147C60BA-2B99-DDBD-F533-8F240CB33C45" name="LINE_PURCHASE_ORDER">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>7197ECB3-2DDD-F095-4F67-9BA406C8B4CA</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PURCHASE_ORDER" id="A4829F60-CAEC-A1C5-C535-3B180640539C">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>277EB439-55F1-ABEF-86AE-AB29ED25A52A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3E9AC7AE-3762-9ACF-9493-4E6688FAD307" referredColumn="9445FA12-076E-D20E-6F88-B8CC5EB5AEF3"/>
+</associations>
+</Column>
+<Column name="RAW_MATERIAL" id="36C59FE7-199E-75B2-9018-4822462A8021">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>1E6EDA62-D229-301C-035C-0F2A300EB751</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F598A2C8-CD8D-D1E4-DA56-0151128F4ABC" referredColumn="E4D7C4E0-B627-D1DF-2C0F-672E6AFB57B0"/>
+</associations>
+</Column>
+<Column name="QUANTITY" id="4150FE7B-EFA0-7B5B-8514-C2957791F9F0">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>73DF507B-9008-4930-C9D8-AA27ACDB3263</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<domain>34AA2A0F-CFE8-585D-45E9-F738AA629751</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C421C7B4-5F5F-C020-9439-9523A271E963" name="LINE_PURCHASE_ORDER_PK">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>9765EF0B-94E8-E9C7-77BF-D39DDB722DE1</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A4829F60-CAEC-A1C5-C535-3B180640539C"/>
+<colUsage columnID="36C59FE7-199E-75B2-9018-4822462A8021"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="24EBCAAD-613F-76B4-493F-082472967D21" name="HEADER_LINE_PURCHASE_ORDER_FK">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A4829F60-CAEC-A1C5-C535-3B180640539C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CA014142-E6F6-18F4-ACE9-2474F2C5955E" name="LINE_PURCHASE_ORDER_RM_FK">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="36C59FE7-199E-75B2-9018-4822462A8021"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

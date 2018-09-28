@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2A9C449E-BFE2-6585-D572-86715E5FFC3A" name="FOREIGN_PROVIDER">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>B378362C-E55F-A300-1B96-37C8D2C5285C</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PROVIDER" id="F286B126-5EFC-1817-76B2-0547BE869DC2">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>F8009ECD-54D0-9FF3-2CB9-8B7AF76FF290</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="23500F3A-A085-81C2-AF65-9E561462B904" referredColumn="0917AE92-91F0-A86D-C23D-0DC21C6A2443"/>
+</associations>
+</Column>
+<Column name="BANK" id="054D0235-2E39-419C-11DF-092344745EA1">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Banco para depositar</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>292D9291-ACEC-E101-0FCD-B820B8DAD9F1</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>6730FD29-3DB5-1F79-E0BB-683C8AADFF68</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ACCOUNT" id="D425ACFD-5E2E-E433-67F6-AF55D0B88352">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Cuenta bancaria</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>57F07757-D2BE-9734-5658-A356DD3DE14D</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>79459F4C-4A0B-550B-C595-57DD683EE19E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CC31CF3E-1E93-0EB2-D616-14CB549C5D4C" name="FOREIGN_PROVIDER_PK">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>977F5024-F6C1-9D2B-804F-E225EAE105DA</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F286B126-5EFC-1817-76B2-0547BE869DC2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E85EA0C8-1995-43AA-7696-C5CE52EB8E9A" name="FOREIGN_PROVIDER_PROVIDER_FK">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F286B126-5EFC-1817-76B2-0547BE869DC2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="LINE_PURCHASE_ORDER" directorySegmentName="seg_0" id="147C60BA-2B99-DDBD-F533-8F240CB33C45">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>3941695E-2479-265E-B165-034C94855FC6</segment>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="RAW_MATERIAL" id="36C59FE7-199E-75B2-9018-4822462A8021">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="QUANTITY" id="4150FE7B-EFA0-7B5B-8514-C2957791F9F0">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PURCHASE_ORDER" id="A4829F60-CAEC-A1C5-C535-3B180640539C">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="HEADER_LINE_PURCHASE_ORDER_FK" id="24EBCAAD-613F-76B4-493F-082472967D21">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="LINE_PURCHASE_ORDER_RM_FK" id="CA014142-E6F6-18F4-ACE9-2474F2C5955E">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="LINE_PURCHASE_ORDER_PK" id="C421C7B4-5F5F-C020-9439-9523A271E963">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

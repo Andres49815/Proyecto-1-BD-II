@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="GARMENT_SIZE" directorySegmentName="seg_0" id="95BC9B2D-327F-79F1-9D04-E1272012B889">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>D4AF3BA9-A956-4C17-C9DE-C91742D058EB</segment>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID" id="CDE931C8-F9B4-96D4-D715-41B1C41CAB78">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="GARMENT_SIZE" id="EBCDA398-636A-1362-863F-5C8B250D5649">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="RECIPE_PK" id="1FAD520A-1C1E-86E3-8434-97E3AF439681">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

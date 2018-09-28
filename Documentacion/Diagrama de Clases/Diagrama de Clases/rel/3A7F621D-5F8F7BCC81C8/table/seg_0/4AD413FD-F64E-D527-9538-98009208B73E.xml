@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4AD413FD-F64E-D527-9538-98009208B73E" name="RAW_MATERIAL_PRV">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>D8C21BBA-5D0C-8560-C90E-F284F169260C</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PROVIDER" id="986F4677-160B-D2E6-1643-3A1A4332DDC0">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Proveedor de la materia prima</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>74FD0C8D-6F77-CD56-65DE-59052A814AEC</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EACE303A-7CEE-DD6C-49D3-DB1EC62E9D35" referredColumn="0917AE92-91F0-A86D-C23D-0DC21C6A2443"/>
+</associations>
+</Column>
+<Column name="RAW_MATERIAL" id="5A63FDC2-E9C1-B02D-070C-46DF2D0974A5">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Materia Prima que suministra</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>A78CF545-9D1A-8C28-4049-88A3A0A826C9</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>68857DC2-1C90-F21C-8E32-D00ACA10C3DC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="UNIT_COST" id="35F0580E-FDE5-2A49-C8D0-5EB15275F9B8">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Costo por unidad de la materia</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>91C2ADD3-6E25-1949-9757-19D3E3BC637C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<domain>34AA2A0F-CFE8-585D-45E9-F738AA629751</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="QUANTITY" id="15904FF1-DB53-6C9C-5222-9F8D1493B949">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Cantidad minima que se le puede pedir de la materia</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>9F871EF1-2283-CBBC-E400-CECFEAB6F119</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<domain>34AA2A0F-CFE8-585D-45E9-F738AA629751</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DELIVER_TIME" id="E8D3EEF8-A384-D61F-E8A9-797BF231EA91">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Tiempo que tarda en dar la materia</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>A156414F-0CC1-E852-ABC5-5A2FB859F722</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C4309203-A6D6-4EDF-3BDA-73C90F37F745</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="967B632B-BE7A-5495-C5F4-37D5213ACCE2" name="RAW_MATERIAL_PRV_PK">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>A52EE6AA-6811-F58C-C18C-BCA781196BEC</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5A63FDC2-E9C1-B02D-070C-46DF2D0974A5"/>
+<colUsage columnID="986F4677-160B-D2E6-1643-3A1A4332DDC0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A9E97699-8460-D435-F3C1-76935E0F8400" name="RAW_MATERIAL_PRV_PROVIDER_FK">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="986F4677-160B-D2E6-1643-3A1A4332DDC0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

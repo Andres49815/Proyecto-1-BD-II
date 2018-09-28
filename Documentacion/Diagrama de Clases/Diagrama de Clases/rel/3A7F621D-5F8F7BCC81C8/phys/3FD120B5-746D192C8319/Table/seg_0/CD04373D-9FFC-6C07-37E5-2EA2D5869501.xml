@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="PROVIDER" directorySegmentName="seg_0" id="CD04373D-9FFC-6C07-37E5-2EA2D5869501">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>92AD3D9E-CA3B-B0D0-CA57-E9674B27D700</segment>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="TYPE" id="0233A4CA-F954-06C9-F655-AFEF757E4967">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID" id="0917AE92-91F0-A86D-C23D-0DC21C6A2443">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="EMAIL" id="4C72D4D0-658A-DC41-F543-17EDFB929515">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PHONE" id="51D12E7C-B41E-3FB3-53E9-196FAB9C94FA">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DIRECTION" id="717AA78B-3F53-1F4E-C1B0-59CCDF78F75A">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NAME" id="75D7BA28-E817-094C-9D02-834F6447E093">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CONTACT_NAME" id="842E380C-61E2-3DEF-4CA3-0029122C730B">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PROVIDER_PK" id="04A827FD-8DD7-D673-C367-0C7656A56136">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

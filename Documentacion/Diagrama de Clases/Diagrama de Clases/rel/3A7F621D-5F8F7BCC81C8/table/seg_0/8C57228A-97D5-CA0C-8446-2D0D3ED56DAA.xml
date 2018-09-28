@@ -1,0 +1,132 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8C57228A-97D5-CA0C-8446-2D0D3ED56DAA" name="RECIPE_RAWMATERIAL">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>9D307EEE-341A-50F7-B18E-FD0834A150FC</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="GARMENT" id="C7014FC5-894F-A7CF-83D6-71B80CCAFC1C">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Prenda que se esta especificando</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>2DA96C48-2343-B72C-43F9-8304D86EAC3C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2B7B1A56-E7F2-2D17-609F-0DC29354C064" referredColumn="405AABDF-C0FF-6369-941A-A2718E70AB82"/>
+</associations>
+</Column>
+<Column name="GARMENT_SIZE" id="0F53D0A7-BC6D-F752-2642-D10ED17E7180">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Tamano de la prenda</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>48EA9D66-50BC-FFDE-88D9-5662DB7C96A7</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6459C2B0-97B8-76B7-180C-82F74A6CF8AC" referredColumn="CDE931C8-F9B4-96D4-D715-41B1C41CAB78"/>
+</associations>
+</Column>
+<Column name="RAW_MATERIAL" id="5E3D3312-6FCB-A75B-FA5F-DD408E3C6117">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Materia prima necesaria</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>BFCFB9FE-1D46-D261-5E9D-28AD0AB7042F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B5E88A62-F784-3C9E-5239-BB32AE09E084" referredColumn="E4D7C4E0-B627-D1DF-2C0F-672E6AFB57B0"/>
+</associations>
+</Column>
+<Column name="QUANTITY" id="CB01B24E-77B0-44D7-D73B-DC217B6D9C35">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Cantidad de la materia prima solicitada</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>2F03E215-0F54-D544-D43D-D1347D629872</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<domain>34AA2A0F-CFE8-585D-45E9-F738AA629751</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="13748232-2ADE-C3CC-D4E9-466239C26501" name="RECIPE_RAWMATERIAL_PK">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>A2989151-7D88-D754-AAD4-6E568CDEC316</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5E3D3312-6FCB-A75B-FA5F-DD408E3C6117"/>
+<colUsage columnID="0F53D0A7-BC6D-F752-2642-D10ED17E7180"/>
+<colUsage columnID="C7014FC5-894F-A7CF-83D6-71B80CCAFC1C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="999A55CB-42E7-4756-A5FD-D34059A3BCA3" name="RECIPE_GARMENT_INDEX">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>D8C2A5DF-E917-963A-15BD-D7EA4C5AA0D5</importedID>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C7014FC5-894F-A7CF-83D6-71B80CCAFC1C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A03FC45C-BC60-6505-76E8-929E0D7F5E3E" name="GARMENT_RAWMATERIAL_FK">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C7014FC5-894F-A7CF-83D6-71B80CCAFC1C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CED434F8-EF82-657C-2838-7EF6AF016DEF" name="RECIPE_RAWMATERIAL_FK">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5E3D3312-6FCB-A75B-FA5F-DD408E3C6117"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="ABF4AA88-C9C3-FCE3-0F4A-0955D8FEABE2" name="SIZE_RAWMATERIAL_FK">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0F53D0A7-BC6D-F752-2642-D10ED17E7180"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

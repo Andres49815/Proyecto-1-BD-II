@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="042CF746-E59B-B586-95A0-13C1B845EA04" name="PURCHASE_ORDER">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>9D8BD808-2C01-4D8D-BBBB-8EBAFFD81213</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="9445FA12-076E-D20E-6F88-B8CC5EB5AEF3">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>8A4932E3-BB16-5819-A556-27EDC768885F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementGenerateAlways>true</autoIncrementGenerateAlways>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="ORDER_DATE" id="A2BD9BD9-7765-6391-FD67-3150FC79F3FE">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Fecha en que se emite la orden</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>AEB6870F-2A07-9AD2-3FEB-CB74D7D37C1B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>CC094785-BE55-B95B-8F14-C7D48537A666</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PROVIDER" id="5C2ABCC9-20EC-178E-65C0-813AD6038F92">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Proveedor a quien se le compra</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>70FBB2AA-5831-D084-9101-61114CA1B83B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4E0D9582-0A1E-D762-45B0-6316BE12C13A" referredColumn="0917AE92-91F0-A86D-C23D-0DC21C6A2443"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1A5DBEBD-7E9A-C80E-38A9-653CCA58D5DD" name="PURCHASE_ORDER_PK">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>36B336DC-E932-2E55-1A97-0314B63F9D3A</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9445FA12-076E-D20E-6F88-B8CC5EB5AEF3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FD49E190-F7B0-7AAD-7A8C-911AE85D3D39" name="PURCHASE_ORDER_PROVIDER_FK">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5C2ABCC9-20EC-178E-65C0-813AD6038F92"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,147 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C78A432D-A858-15F4-A908-0CBB7E1D3E50" name="LINE_REQUEST">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>2A9D3266-4B9A-EAD3-4507-5BE87456ABF5</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="REQUEST" id="EA0C701F-685F-8321-45AF-2188E274DE6B">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>F1D7523B-3711-CBC1-9570-7EA5B20D2ED1</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8E6A1114-8FF5-B7C6-3E3E-3D0CEA3399AD" referredColumn="1FAA7F20-693D-F2BE-162E-E6E460B1F080"/>
+</associations>
+</Column>
+<Column name="LINE_ID" id="D1E5DD5E-A7D8-C3EE-2EB4-D5AF54B4D848">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Numero de linea en el request</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>60813D89-FE0E-49AA-8AF0-852AA6C5AB39</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GARMENT" id="167CE763-2CA8-860A-9F62-21B8888C5730">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Prenda (con estilo) solicitada</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>E93F5DB7-9232-F6C3-0352-7F625FE053A5</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C09E835C-144D-D029-9A6F-BDB244CFB123" referredColumn="405AABDF-C0FF-6369-941A-A2718E70AB82"/>
+</associations>
+</Column>
+<Column name="GARMENT_SIZE" id="3427F33D-A450-422D-D06E-DEE71D6CAB41">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Tamano de la prenda solicitada</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>C340CF80-8E55-2197-BA50-164A6EC1FBA7</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="77591C3D-3DAA-C067-D6B5-FCEB5662311F" referredColumn="CDE931C8-F9B4-96D4-D715-41B1C41CAB78"/>
+</associations>
+</Column>
+<Column name="QUANTITY" id="02318D02-3624-82A1-589E-51FD4760A7DB">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<commentInRDBMS>Cantidad de elementos de la prenda en la linea</commentInRDBMS>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>EDF13103-E25D-B0B7-D5F3-6F3117B26AC0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3B68FACF-73C8-A641-42D9-72C026410812" name="LINE_REQUEST_PK">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>0E80A83E-5CA6-F36C-C7E5-81F584AC3143</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA0C701F-685F-8321-45AF-2188E274DE6B"/>
+<colUsage columnID="D1E5DD5E-A7D8-C3EE-2EB4-D5AF54B4D848"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E78C8D05-2D2D-B77B-3151-DF8EF5D492FE" name="LINE_REQUEST_UK">
+<sourceDDLFile>script_definicion.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>36B450D3-97C9-A3E4-7F11-89E091F6B942</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA0C701F-685F-8321-45AF-2188E274DE6B"/>
+<colUsage columnID="D1E5DD5E-A7D8-C3EE-2EB4-D5AF54B4D848"/>
+<colUsage columnID="167CE763-2CA8-860A-9F62-21B8888C5730"/>
+<colUsage columnID="3427F33D-A450-422D-D06E-DEE71D6CAB41"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F2B9067C-031C-C9AB-90D4-56A5A8B9DB6B" name="LINE_REQUEST_GARMENT_FK">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="167CE763-2CA8-860A-9F62-21B8888C5730"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="820C67B5-363C-0792-A8FA-D7C047AA2EEB" name="LINE_REQUEST_GARMENT_SIZE_FK">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3427F33D-A450-422D-D06E-DEE71D6CAB41"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D5DDBC90-BA9B-B09A-529D-CE9096F0DDF9" name="LINE_REQUEST_REQUEST_FK">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:01:31 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA0C701F-685F-8321-45AF-2188E274DE6B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

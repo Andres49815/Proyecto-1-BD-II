@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="GARMENT_RAWMATERIAL_FK" directorySegmentName="seg_0" id="E4CB0D59-F397-A3C4-D691-EE1689A72487">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<generatorID>2B7B1A56-E7F2-2D17-609F-0DC29354C064</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<sourcePk>B485746B-AD8A-DEDE-8C2D-757961038535</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B0B50828-E05A-BC68-EACE-77CBD77B2FC6</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>93CF95F8-BB38-4E83-BDE5-44851042C420</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

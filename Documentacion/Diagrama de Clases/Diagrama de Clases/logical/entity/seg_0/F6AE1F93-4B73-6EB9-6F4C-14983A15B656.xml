@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F6AE1F93-4B73-6EB9-6F4C-14983A15B656" name="MATCH RAW MATERIAL">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<generatorID>37F24AC4-24A2-1868-87FD-503BA943607A</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="RAW MATERIAL" id="CEAD6AF0-CBDF-77CD-F918-CAC6E314564A">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<commentInRDBMS>Nombre del material en el sistema del proveedor</commentInRDBMS>
+<generatorID>048204B9-D9A4-830C-FFA7-DF8CDFD4D5C9</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<referedAttribute>E8AD1FD5-2B19-8216-B7E9-137CEDECBB07</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>68857DC2-1C90-F21C-8E32-D00ACA10C3DC</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PROVIDER" id="5C41408B-EC66-C1F2-A718-DC819AA3A0C5">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<commentInRDBMS>Proveedor que provee  el material</commentInRDBMS>
+<generatorID>048204B9-D9A4-830C-FFA7-DF8CDFD4D5C9</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<referedAttribute>EF8BCC57-EE57-E24B-F10C-38A278169FB5</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SYS RAW MATERIAL" id="18D3AF2B-58F1-E3B9-E7EF-0CE7162BE335">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<commentInRDBMS>Nombre del material en el sistema interno</commentInRDBMS>
+<generatorID>73A53D3B-8FA8-3A1F-EECD-CE8C137912BD</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<referedAttribute>5EEE32B7-806C-9466-C785-2E7587F40CF0</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C7D8B56E-CB87-84BC-1910-6D83739595F1" name="MATCH RAW MATERIAL PK">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<generatorID>176E3D83-2AD3-9E6F-B202-8F33C8A82ECB</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>18D3AF2B-58F1-E3B9-E7EF-0CE7162BE335</attributeRef>
+<attributeRef>CEAD6AF0-CBDF-77CD-F918-CAC6E314564A</attributeRef>
+<attributeRef>5C41408B-EC66-C1F2-A718-DC819AA3A0C5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

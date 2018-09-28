@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Diagrama de Clases" id="CBC85266-4022-9561-58B0-78A3537C8AD0" version="3.5">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 00:58:21 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>CBC85266-4022-9561-58B0-78A3537C8AD0</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="270CDD13-D53D-01B3-7E4F-9B4FB598D0EA">
+<designStoragePath>C:\script_definicion</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

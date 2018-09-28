@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="11CD2F0A-4401-ABE1-D4A4-C5BF1BBA38B9" name="LINE REQUEST">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<generatorID>C78A432D-A858-15F4-A908-0CBB7E1D3E50</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="REQUEST" id="5D9CFCE7-C0B6-4799-E131-9269881A4ADA">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<generatorID>0CA1AD8B-C931-1326-28B9-97752004A6ED</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<referedAttribute>EB6FF7F5-3CB7-A8CB-5453-7ABD26AB4447</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="LINE ID" id="7CFC7DEF-9979-7D03-B15B-CA6C3F0E3A2F">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<commentInRDBMS>Numero de linea en el request</commentInRDBMS>
+<generatorID>D1E5DD5E-A7D8-C3EE-2EB4-D5AF54B4D848</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="GARMENT" id="BAF1029E-C4DA-61A8-AE7D-5DEC7C9904FC">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<commentInRDBMS>Prenda (con estilo) solicitada</commentInRDBMS>
+<generatorID>C8C2FF1A-1316-8DD6-2383-7DF5FA57A2D1</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<referedAttribute>1D6869D4-787A-C520-4274-E3022522675B</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="GARMENT SIZE" id="564B97CB-9889-3AE1-3639-5D1323F56A1B">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<commentInRDBMS>Tamano de la prenda solicitada</commentInRDBMS>
+<generatorID>350DE96C-B6BF-98BA-13CE-6E3E7AE89966</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<referedAttribute>DAE15FB5-031C-5CC0-0140-70AF83AC13D9</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="QUANTITY" id="CBF89965-B7BC-C391-A6AF-1598235FC360">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<commentInRDBMS>Cantidad de elementos de la prenda en la linea</commentInRDBMS>
+<generatorID>02318D02-3624-82A1-589E-51FD4760A7DB</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>1B3DD2E6-7ABC-BAD1-24AD-DE54FE911CC7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="696B90FA-4A5C-254C-D3F0-B07023DF260F" name="LINE REQUEST PK">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<generatorID>3B68FACF-73C8-A641-42D9-72C026410812</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>5D9CFCE7-C0B6-4799-E131-9269881A4ADA</attributeRef>
+<attributeRef>7CFC7DEF-9979-7D03-B15B-CA6C3F0E3A2F</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="33D7FA6C-06D2-BFE7-DA23-589805CBDE1E" name="LINE REQUEST UK">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-09-27 01:28:33 UTC</createdTime>
+<generatorID>E78C8D05-2D2D-B77B-3151-DF8EF5D492FE</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="3A7F621D-BD66-469C-AB16-5F8F7BCC81C8" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>5D9CFCE7-C0B6-4799-E131-9269881A4ADA</attributeRef>
+<attributeRef>7CFC7DEF-9979-7D03-B15B-CA6C3F0E3A2F</attributeRef>
+<attributeRef>BAF1029E-C4DA-61A8-AE7D-5DEC7C9904FC</attributeRef>
+<attributeRef>564B97CB-9889-3AE1-3639-5D1323F56A1B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
