@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema xmlns:ns0="http://componentejb/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://componentejb/">
+  <xsd:complexType name="closeConexion">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="xsd:int"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="closeConexionResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="commit">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="xsd:int"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="commitResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="getConnection"/>
+  <xsd:complexType name="getConnectionResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:int"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="getGarments"/>
+  <xsd:complexType name="getGarmentsResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:garment" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="insertGarment">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="ns0:garment" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="insertGarmentResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="removeGarment">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="ns0:garment" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="removeGarmentResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="updateGarment">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="ns0:garment" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="updateGarmentResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="xsd:boolean"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="garment">
+    <xsd:sequence>
+      <xsd:element name="description" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="id" type="xsd:decimal" minOccurs="0"/>
+      <xsd:element name="image" type="xsd:base64Binary" minOccurs="0"/>
+      <xsd:element name="style" type="xsd:decimal" minOccurs="0"/>
+      <xsd:element name="unitCost" type="xsd:double"/>
+      <xsd:element name="video" type="xsd:base64Binary" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="closeConexion" type="ns0:closeConexion"/>
+  <xsd:element name="closeConexionResponse" type="ns0:closeConexionResponse"/>
+  <xsd:element name="commit" type="ns0:commit"/>
+  <xsd:element name="commitResponse" type="ns0:commitResponse"/>
+  <xsd:element name="getConnection" type="ns0:getConnection"/>
+  <xsd:element name="getConnectionResponse" type="ns0:getConnectionResponse"/>
+  <xsd:element name="getGarments" type="ns0:getGarments"/>
+  <xsd:element name="getGarmentsResponse" type="ns0:getGarmentsResponse"/>
+  <xsd:element name="insertGarment" type="ns0:insertGarment"/>
+  <xsd:element name="insertGarmentResponse" type="ns0:insertGarmentResponse"/>
+  <xsd:element name="removeGarment" type="ns0:removeGarment"/>
+  <xsd:element name="removeGarmentResponse" type="ns0:removeGarmentResponse"/>
+  <xsd:element name="updateGarment" type="ns0:updateGarment"/>
+  <xsd:element name="updateGarmentResponse" type="ns0:updateGarmentResponse"/>
+</xsd:schema>

@@ -1,0 +1,30 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="GRUPO07" className="oracle.jdeveloper.db.adapter.DatabaseProvider" credentialStoreKey="GRUPO07"
+             xmlns="">
+    <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+    <RefAddresses>
+      <StringRefAddr addrType="oraDriverType">
+        <Contents>thin</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="hostname">
+        <Contents>172.19.32.101</Contents>
+      </StringRefAddr>
+      <SecureRefAddr addrType="password"/>
+      <StringRefAddr addrType="subtype">
+        <Contents>oraJDBC</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="port">
+        <Contents>1521</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="serviceName">
+        <Contents>grupo07.basedatos</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="user">
+        <Contents>GRUPO07</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="parameters">
+        <Contents>cdb01.sys.IC=sys@//172.19.32.101;grupo07=GRUPO07Q//172.19.32.101</Contents>
+      </StringRefAddr>
+    </RefAddresses>
+  </Reference>
+</References>

@@ -68,22 +68,13 @@
       <string v="oracle.adfdtinternal.model.ide.settings.ADFMSettings/adfmContentSet"/>
       <string v="oracle.toplink.workbench.addin/toplinkContentSet"/>
    </list>
-   <value n="defaultPackage" v="wscliente"/>
-   <hash n="oracle.ide.model.TechnologyScopeConfiguration">
-      <list n="technologyScope">
-         <string v="Java"/>
-         <string v="WSDL"/>
-         <string v="WSPolicy"/>
-         <string v="WebServices"/>
-         <string v="XML"/>
-      </list>
-   </hash>
+   <value n="defaultPackage" v="grupo07.basedatos"/>
    <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
       <value n="webIANAEncoding" v="windows-1252"/>
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
-      <value n="j2eeWebAppName" v="appPrendas-wsCliente-webapp"/>
-      <value n="j2eeWebContextRoot" v="appPrendas-wsCliente-context-root"/>
+      <value n="j2eeWebAppName" v="proyectobasedatosprendas-grupo07.basedatos-webapp"/>
+      <value n="j2eeWebContextRoot" v="proyectobasedatosprendas-grupo07.basedatos-context-root"/>
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectPaths">
       <url n="outputDirectory" path="classes/"/>

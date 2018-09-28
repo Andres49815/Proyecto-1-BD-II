@@ -1,13 +1,11 @@
-package prendasEBJ;
+package componentejb;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import java.util.ArrayList;
-
 import java.util.Collection;
 
 import javax.annotation.Resource;
@@ -18,31 +16,30 @@ import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;
 
 import javax.jws.WebMethod;
-
 import javax.jws.WebService;
 
 import javax.naming.InitialContext;
-
 import javax.naming.NamingException;
 
 import javax.sql.DataSource;
 
-@Stateless(name = "garmentEJB", mappedName = "appPrendas-Project2-garmentEJB")
+@Stateless(name = "garmentEJB", mappedName = "proyectobasedatosprendas-componentEJB-garmentEJB")
 @TransactionManagement(TransactionManagementType.BEAN)
 @WebService(wsdlLocation = "/META-INF/garmentEJBBeanService.wsdl")
 public class garmentEJBBean implements garmentEJB, garmentEJBLocal {
     @Resource
     SessionContext sessionContext;
     static ArrayList<Connection> connectionList = new ArrayList<Connection>(0);
-        static PreparedStatement insert;
-        static PreparedStatement update;
-        static PreparedStatement remove;
-        static PreparedStatement query;
+    static PreparedStatement insert;
+    static PreparedStatement update;
+    static PreparedStatement remove;
+    static PreparedStatement query;
 
-        public garmentEJBBean() {
-        }
+    public garmentEJBBean() {
+    }
 
         @Override
+        @WebMethod
         public int getConnection() {
             Connection conn = null;
             try{
@@ -76,6 +73,7 @@ public class garmentEJBBean implements garmentEJB, garmentEJBLocal {
          }
 
         @Override
+        @WebMethod
         public boolean insertGarment(Garment g) {
             /*Insert into Garment(id, description, unit_cost, image, video, style)*/
             try{
@@ -94,6 +92,7 @@ public class garmentEJBBean implements garmentEJB, garmentEJBLocal {
         }
 
         @Override
+        @WebMethod
         public boolean updateGarment(Garment g) {
             /*Update Garment set description = ?, 
              * unit_cost = ?, image = ?, 
@@ -112,6 +111,7 @@ public class garmentEJBBean implements garmentEJB, garmentEJBLocal {
         }
 
         @Override
+        @WebMethod
         public boolean removeGarment(Garment g) {
             try{
                 remove.setBigDecimal(1, g.getId());
@@ -123,7 +123,7 @@ public class garmentEJBBean implements garmentEJB, garmentEJBLocal {
         }
 
         @Override
-        //@WebMethod
+        @WebMethod
         public boolean commit(int index) {
             try{
                 connectionList.get(index).commit();
@@ -134,6 +134,7 @@ public class garmentEJBBean implements garmentEJB, garmentEJBLocal {
         }
 
         @Override
+        @WebMethod
         public Collection<Garment> getGarments() {
             Collection<Garment> gaments;
             gaments = new ArrayList<Garment>();
@@ -156,4 +157,4 @@ public class garmentEJBBean implements garmentEJB, garmentEJBLocal {
              }
 
         }
-}
+    }

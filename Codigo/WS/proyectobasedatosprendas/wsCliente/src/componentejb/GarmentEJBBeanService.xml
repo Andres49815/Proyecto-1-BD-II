@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle-webservice-clients xmlns:ns0="http://java.sun.com/xml/ns/javaee">
+   <webservice-client>
+      <service-qname namespaceURI="http://componentejb/" localpart="garmentEJBBeanService"/>
+      <port-info>
+         <wsdl-port namespaceURI="http://componentejb/" localpart="garmentEJBBeanPort"/>
+         <runtime/>
+         <operations>
+            <operation name="getConnection"/>
+            <operation name="closeConexion"/>
+            <operation name="insertGarment"/>
+            <operation name="updateGarment"/>
+            <operation name="removeGarment"/>
+            <operation name="getGarments"/>
+            <operation name="commit"/>
+         </operations>
+      </port-info>
+   </webservice-client>
+</oracle-webservice-clients>
