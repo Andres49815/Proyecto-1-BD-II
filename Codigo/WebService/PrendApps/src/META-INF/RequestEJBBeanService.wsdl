@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions targetNamespace="http://prendapps/" name="RequestEJBBeanService" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:tns="http://prendapps/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://prendapps/" schemaLocation="RequestEJBBeanService_schema1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="getConnection">
+    <part name="parameters" element="tns:getConnection"/>
+  </message>
+  <message name="getConnectionResponse">
+    <part name="parameters" element="tns:getConnectionResponse"/>
+  </message>
+  <message name="commit">
+    <part name="parameters" element="tns:commit"/>
+  </message>
+  <message name="commitResponse">
+    <part name="parameters" element="tns:commitResponse"/>
+  </message>
+  <message name="removeRequest">
+    <part name="parameters" element="tns:removeRequest"/>
+  </message>
+  <message name="removeRequestResponse">
+    <part name="parameters" element="tns:removeRequestResponse"/>
+  </message>
+  <message name="getRequests">
+    <part name="parameters" element="tns:getRequests"/>
+  </message>
+  <message name="getRequestsResponse">
+    <part name="parameters" element="tns:getRequestsResponse"/>
+  </message>
+  <message name="getLineRquests">
+    <part name="parameters" element="tns:getLineRquests"/>
+  </message>
+  <message name="getLineRquestsResponse">
+    <part name="parameters" element="tns:getLineRquestsResponse"/>
+  </message>
+  <message name="closeConection">
+    <part name="parameters" element="tns:closeConection"/>
+  </message>
+  <message name="closeConectionResponse">
+    <part name="parameters" element="tns:closeConectionResponse"/>
+  </message>
+  <message name="insertRequest">
+    <part name="parameters" element="tns:insertRequest"/>
+  </message>
+  <message name="insertRequestResponse">
+    <part name="parameters" element="tns:insertRequestResponse"/>
+  </message>
+  <message name="hola">
+    <part name="parameters" element="tns:hola"/>
+  </message>
+  <message name="holaResponse">
+    <part name="parameters" element="tns:holaResponse"/>
+  </message>
+  <message name="updateRequest">
+    <part name="parameters" element="tns:updateRequest"/>
+  </message>
+  <message name="updateRequestResponse">
+    <part name="parameters" element="tns:updateRequestResponse"/>
+  </message>
+  <message name="removeLineRequest">
+    <part name="parameters" element="tns:removeLineRequest"/>
+  </message>
+  <message name="removeLineRequestResponse">
+    <part name="parameters" element="tns:removeLineRequestResponse"/>
+  </message>
+  <message name="updateLineRequest">
+    <part name="parameters" element="tns:updateLineRequest"/>
+  </message>
+  <message name="updateLineRequestResponse">
+    <part name="parameters" element="tns:updateLineRequestResponse"/>
+  </message>
+  <message name="insertLineRequest">
+    <part name="parameters" element="tns:insertLineRequest"/>
+  </message>
+  <message name="insertLineRequestResponse">
+    <part name="parameters" element="tns:insertLineRequestResponse"/>
+  </message>
+  <portType name="RequestEJBBean">
+    <operation name="getConnection">
+      <input wsam:Action="http://prendapps/RequestEJBBean/getConnectionRequest" message="tns:getConnection"/>
+      <output wsam:Action="http://prendapps/RequestEJBBean/getConnectionResponse" message="tns:getConnectionResponse"/>
+    </operation>
+    <operation name="commit">
+      <input wsam:Action="http://prendapps/RequestEJBBean/commitRequest" message="tns:commit"/>
+      <output wsam:Action="http://prendapps/RequestEJBBean/commitResponse" message="tns:commitResponse"/>
+    </operation>
+    <operation name="removeRequest">
+      <input wsam:Action="http://prendapps/RequestEJBBean/removeRequestRequest" message="tns:removeRequest"/>
+      <output wsam:Action="http://prendapps/RequestEJBBean/removeRequestResponse" message="tns:removeRequestResponse"/>
+    </operation>
+    <operation name="getRequests">
+      <input wsam:Action="http://prendapps/RequestEJBBean/getRequestsRequest" message="tns:getRequests"/>
+      <output wsam:Action="http://prendapps/RequestEJBBean/getRequestsResponse" message="tns:getRequestsResponse"/>
+    </operation>
+    <operation name="getLineRquests">
+      <input wsam:Action="http://prendapps/RequestEJBBean/getLineRquestsRequest" message="tns:getLineRquests"/>
+      <output wsam:Action="http://prendapps/RequestEJBBean/getLineRquestsResponse" message="tns:getLineRquestsResponse"/>
+    </operation>
+    <operation name="closeConection">
+      <input wsam:Action="http://prendapps/RequestEJBBean/closeConectionRequest" message="tns:closeConection"/>
+      <output wsam:Action="http://prendapps/RequestEJBBean/closeConectionResponse" message="tns:closeConectionResponse"/>
+    </operation>
+    <operation name="insertRequest">
+      <input wsam:Action="http://prendapps/RequestEJBBean/insertRequestRequest" message="tns:insertRequest"/>
+      <output wsam:Action="http://prendapps/RequestEJBBean/insertRequestResponse" message="tns:insertRequestResponse"/>
+    </operation>
+    <operation name="hola">
+      <input wsam:Action="http://prendapps/RequestEJBBean/holaRequest" message="tns:hola"/>
+      <output wsam:Action="http://prendapps/RequestEJBBean/holaResponse" message="tns:holaResponse"/>
+    </operation>
+    <operation name="updateRequest">
+      <input wsam:Action="http://prendapps/RequestEJBBean/updateRequestRequest" message="tns:updateRequest"/>
+      <output wsam:Action="http://prendapps/RequestEJBBean/updateRequestResponse" message="tns:updateRequestResponse"/>
+    </operation>
+    <operation name="removeLineRequest">
+      <input wsam:Action="http://prendapps/RequestEJBBean/removeLineRequestRequest" message="tns:removeLineRequest"/>
+      <output wsam:Action="http://prendapps/RequestEJBBean/removeLineRequestResponse" message="tns:removeLineRequestResponse"/>
+    </operation>
+    <operation name="updateLineRequest">
+      <input wsam:Action="http://prendapps/RequestEJBBean/updateLineRequestRequest" message="tns:updateLineRequest"/>
+      <output wsam:Action="http://prendapps/RequestEJBBean/updateLineRequestResponse" message="tns:updateLineRequestResponse"/>
+    </operation>
+    <operation name="insertLineRequest">
+      <input wsam:Action="http://prendapps/RequestEJBBean/insertLineRequestRequest" message="tns:insertLineRequest"/>
+      <output wsam:Action="http://prendapps/RequestEJBBean/insertLineRequestResponse" message="tns:insertLineRequestResponse"/>
+    </operation>
+  </portType>
+  <binding name="RequestEJBBeanPortBinding" type="tns:RequestEJBBean">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <operation name="getConnection">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="commit">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="removeRequest">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getRequests">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getLineRquests">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="closeConection">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="insertRequest">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="hola">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="updateRequest">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="removeLineRequest">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="updateLineRequest">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="insertLineRequest">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="RequestEJBBeanService">
+    <port name="RequestEJBBeanPort" binding="tns:RequestEJBBeanPortBinding">
+      <soap:address location="http://localhost:7101/WebService-PrendApps-webapp/RequestEJBBeanService"/>
+    </port>
+  </service>
+</definitions>
