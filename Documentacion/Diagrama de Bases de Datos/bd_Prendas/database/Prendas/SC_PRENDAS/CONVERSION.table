@@ -1,118 +1,43 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>RAW_MATERIAL_PRV</name>
+  <name>CONVERSION</name>
   <columns>
     <column>
-      <name>PROVIDER</name>
+      <name>ORIGIN_MEASSURE</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>INT</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
-      <properties>
-        <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">Proveedor de la materia prima</value>
-        </entry>
-      </properties>
     </column>
     <column>
-      <name>RAW_MATERIAL</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>size</key>
-            <value class="java.lang.Long">20</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-      <properties>
-        <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">Materia Prima que suministra</value>
-        </entry>
-      </properties>
-    </column>
-    <column>
-      <name>UNIT_COST</name>
-      <dataTypeUsage>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>DOUBLE PRECISION</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-      <properties>
-        <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">Costo por unidad de la materia</value>
-        </entry>
-      </properties>
-    </column>
-    <column>
-      <name>QUANTITY</name>
-      <dataTypeUsage>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>DOUBLE PRECISION</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-      <properties>
-        <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">Cantidad minima que se le puede pedir de la materia</value>
-        </entry>
-      </properties>
-    </column>
-    <column>
-      <name>DELIVER_TIME</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>precision</key>
-            <value class="java.lang.String">2</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>NUMBER</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-      <properties>
-        <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">Tiempo que tarda en dar la materia</value>
-        </entry>
-      </properties>
-    </column>
-    <column>
-      <name>UNIT_MEASSURE</name>
+      <name>DESTINY_MEASSURE</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>INT</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
-      <properties>
-        <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">Unidad de medida</value>
-        </entry>
-      </properties>
+    </column>
+    <column>
+      <name>CONVERSION</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>DOUBLE PRECISION</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
     </column>
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>RAW_MATERIAL_PRV_PK</name>
+      <name>CONVERSION_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>RAW_MATERIAL</name>
+          <name>ORIGIN_MEASSURE</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>RAW_MATERIAL_PRV</name>
+            <name>CONVERSION</name>
             <schemaName>SC_PRENDAS</schemaName>
             <type>TABLE</type>
           </parent>
@@ -120,9 +45,9 @@
           <type>COLUMN</type>
         </columnID>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>PROVIDER</name>
+          <name>DESTINY_MEASSURE</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>RAW_MATERIAL_PRV</name>
+            <name>CONVERSION</name>
             <schemaName>SC_PRENDAS</schemaName>
             <type>TABLE</type>
           </parent>
@@ -132,9 +57,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>RAW_MATERIAL_PRV_PK</name>
+        <name>CONVERSION_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>RAW_MATERIAL_PRV</name>
+          <name>CONVERSION</name>
           <schemaName>SC_PRENDAS</schemaName>
           <type>TABLE</type>
         </parent>
@@ -143,12 +68,12 @@
       </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>RAW_MATERIAL_PRV_FK1</name>
+      <name>CNVRSN_UNIT_DESTINY_FK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>UNIT_MEASSURE</name>
+          <name>DESTINY_MEASSURE</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>RAW_MATERIAL_PRV</name>
+            <name>CONVERSION</name>
             <schemaName>SC_PRENDAS</schemaName>
             <type>TABLE</type>
           </parent>
@@ -169,12 +94,12 @@
       </referenceID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>RAW_MATERIAL_PRV_PROVIDER_FK</name>
+      <name>CNVRSN_UNIT_ORIGIN_FK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>PROVIDER</name>
+          <name>ORIGIN_MEASSURE</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>RAW_MATERIAL_PRV</name>
+            <name>CONVERSION</name>
             <schemaName>SC_PRENDAS</schemaName>
             <type>TABLE</type>
           </parent>
@@ -184,9 +109,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PROVIDER_PK</name>
+        <name>MEASSURE_UNIT_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROVIDER</name>
+          <name>MEASSURE_UNIT</name>
           <schemaName>SC_PRENDAS</schemaName>
           <type>TABLE</type>
         </parent>
@@ -197,14 +122,14 @@
   </constraints>
   <indexes>
     <index>
-      <name>RAW_MATERIAL_PRV_PK</name>
+      <name>CONVERSION_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>RAW_MATERIAL</expressionSource>
+          <expressionSource>ORIGIN_MEASSURE</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
         <columnExpression>
-          <expressionSource>PROVIDER</expressionSource>
+          <expressionSource>DESTINY_MEASSURE</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
@@ -216,17 +141,6 @@
     </index>
   </indexes>
   <properties>
-    <entry>
-      <key>OracleStorageProperties</key>
-      <value class="oracle.javatools.db.ora.OracleStorageProperties">
-        <initialExtent>2800000</initialExtent>
-        <minExtent>1</minExtent>
-        <nextExtent>2800000</nextExtent>
-        <percentFree>24</percentFree>
-        <percentIncrease>0</percentIncrease>
-        <percentUsed>66</percentUsed>
-      </value>
-    </entry>
     <entry>
       <key>TableType</key>
       <value class="oracle.javatools.db.Table$TableType">NORMAL</value>

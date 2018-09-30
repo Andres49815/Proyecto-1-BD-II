@@ -105,6 +105,21 @@
         </entry>
       </properties>
     </column>
+    <column>
+      <name>MEASSURE_UNIT</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>INT</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Unidad de medida</value>
+        </entry>
+      </properties>
+    </column>
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
@@ -132,6 +147,32 @@
         <schemaName>SC_PRENDAS</schemaName>
         <type>INDEX</type>
       </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>RW_MTL_MEASSURE_UNIT_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>MEASSURE_UNIT</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>RAW_MATERIAL</name>
+            <schemaName>SC_PRENDAS</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>MEASSURE_UNIT_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>MEASSURE_UNIT</name>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SC_PRENDAS</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
     </constraint>
   </constraints>
   <indexes>
