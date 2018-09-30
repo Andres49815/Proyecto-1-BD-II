@@ -55,13 +55,28 @@
       </properties>
     </column>
     <column>
+      <name>STYLE</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>INT</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Estilo de la prenda</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
       <name>IMAGE</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>BLOB</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>true</notNull>
+      <notNull>false</notNull>
       <properties>
         <entry>
           <key>Comment</key>
@@ -76,26 +91,11 @@
           <typeName>BLOB</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>true</notNull>
+      <notNull>false</notNull>
       <properties>
         <entry>
           <key>Comment</key>
           <value class="java.lang.String">Video de la prenda</value>
-        </entry>
-      </properties>
-    </column>
-    <column>
-      <name>STYLE</name>
-      <dataTypeUsage>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>INT</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-      <properties>
-        <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">Estilo de la prenda</value>
         </entry>
       </properties>
     </column>

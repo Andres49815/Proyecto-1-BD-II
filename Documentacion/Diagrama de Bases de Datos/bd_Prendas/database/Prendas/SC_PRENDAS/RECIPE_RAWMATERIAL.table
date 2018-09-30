@@ -62,6 +62,15 @@
         </entry>
       </properties>
     </column>
+    <column>
+      <name>MEASURE_UNIT</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>INT</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
@@ -129,6 +138,32 @@
         <name>GARMENT_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>GARMENT</name>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SC_PRENDAS</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>RECIPE_MEASUREUNT_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>MEASURE_UNIT</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>RECIPE_RAWMATERIAL</name>
+            <schemaName>SC_PRENDAS</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SC_PRENDAS</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>MEASSURE_UNIT_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>MEASSURE_UNIT</name>
           <schemaName>SC_PRENDAS</schemaName>
           <type>TABLE</type>
         </parent>
