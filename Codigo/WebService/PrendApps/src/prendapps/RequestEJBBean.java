@@ -27,10 +27,14 @@ public class RequestEJBBean implements RequestEJB, RequestEJBLocal {
     @Resource
     SessionContext sessionContext;
     static ArrayList<Connection> connectionList = new ArrayList<>(0);
-        static PreparedStatement insert;
-        static PreparedStatement update;
-        static PreparedStatement remove;
-        static PreparedStatement query;
+        static PreparedStatement insertRL;
+        static PreparedStatement insertR;
+        static PreparedStatement updateRL;
+        static PreparedStatement updateR;
+        static PreparedStatement removeR;
+        static PreparedStatement removeRL;
+        static PreparedStatement queryR;
+        static PreparedStatement queryRL;
 
         public RequestEJBBean() {
         }
@@ -46,10 +50,14 @@ public class RequestEJBBean implements RequestEJB, RequestEJBLocal {
                         conn.setAutoCommit(false);
                         //conn.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
                         connectionList.add(conn);
-                        insert = conn.prepareStatement("Insert into Line_Request vsalues(?,?,?,?,?,?)");
-                        update = conn.prepareStatement("Update Line_Request set request_id = ?, line_id = ?, garment = ?, garment_size = ?, quantity = ?, unit_price = ?");
-                        query = conn.prepareStatement("Select * from Request_Line");
-                        remove = conn.prepareStatement("Delect from Line_Request where line_id = ? and request_line = ?");
+                        insertRL = conn.prepareStatement("Insert into Line_Request values(?,?,?,?,?,?)");
+                        insertR = conn.prepareStatement("insert into Request values (?,?,?,?)");
+                        updateRL = conn.prepareStatement("Update Line_Request set request_id = ?, line_id = ?, garment = ?, garment_size = ?, quantity = ?, unit_price = ?");
+                        updateR = conn.prepareStatement("Update Request set request_id = ?, line_id = ?, garment = ?, garment_size = ?, quantity = ?, unit_price = ?");
+                        queryRL = conn.prepareStatement("Select * from Line_Request");
+                        queryR = conn.prepareStatement("Select * from Request");
+                        removeR = conn.prepareStatement("Delete from Request where id = ?");
+                        removeRL = conn.prepareStatement("Delete from Line_Request where line_id = ? and request_line = ?");
                         return connectionList.size() - 1;                 
                     }catch(SQLException e){
                         return -1;
@@ -62,13 +70,13 @@ public class RequestEJBBean implements RequestEJB, RequestEJBLocal {
                 @WebMethod
                 public boolean insertLineRequest(LineRequest lr) {
                     try {
-                        insert.setBigDecimal(1,lr.getRequestId());
-                        insert.setBigDecimal(2, lr.getLineId());
-                        insert.setBigDecimal(3, lr.getGarment());
-                        insert.setBigDecimal(4, lr.getGarmentSize());
-                        insert.setBigDecimal(5, lr.getQuantity());
-                        insert.setDouble(6,lr.getUnitPrice());
-                        insert.executeUpdate();
+                        insertRL.setBigDecimal(1,lr.getRequestId());
+                        insertRL.setBigDecimal(2, lr.getLineId());
+                        insertRL.setBigDecimal(3, lr.getGarment());
+                        insertRL.setBigDecimal(4, lr.getGarmentSize());
+                        insertRL.setBigDecimal(5, lr.getQuantity());
+                        insertRL.setDouble(6,lr.getUnitPrice());
+                        insertRL.executeUpdate();
                         return true;
                     } catch (SQLException e) {
                         return false;
@@ -79,13 +87,13 @@ public class RequestEJBBean implements RequestEJB, RequestEJBLocal {
                 @WebMethod
                 public boolean updateLineRequest(LineRequest lr) {
                     try{
-                        update.setBigDecimal(1,lr.getRequestId());
-                        update.setBigDecimal(2, lr.getLineId());
-                        update.setBigDecimal(3, lr.getGarment());
-                        update.setBigDecimal(4, lr.getGarmentSize());
-                        update.setBigDecimal(5, lr.getQuantity());
-                        update.setDouble(6,lr.getUnitPrice());
-                        update.executeUpdate();
+                        updateRL.setBigDecimal(1,lr.getRequestId());
+                        updateRL.setBigDecimal(2, lr.getLineId());
+                        updateRL.setBigDecimal(3, lr.getGarment());
+                        updateRL.setBigDecimal(4, lr.getGarmentSize());
+                        updateRL.setBigDecimal(5, lr.getQuantity());
+                        updateRL.setDouble(6,lr.getUnitPrice());
+                        updateRL.executeUpdate();
                         return true;
                     }catch(SQLException e){
                         return false;
@@ -106,9 +114,9 @@ public class RequestEJBBean implements RequestEJB, RequestEJBLocal {
                 @WebMethod
                 public boolean removeLineRequest(LineRequest lr) {
                     try{
-                        remove.setBigDecimal(1, lr.getRequestId());
-                        remove.setBigDecimal(2, lr.getLineId());
-                        remove.executeUpdate();
+                        removeRL.setBigDecimal(1, lr.getRequestId());
+                        removeRL.setBigDecimal(2, lr.getLineId());
+                        removeRL.executeUpdate();
                         return true;
                     }catch(SQLException e){
                         return false;
@@ -135,7 +143,7 @@ public class RequestEJBBean implements RequestEJB, RequestEJBLocal {
                     lrequests = new ArrayList<LineRequest>();
                     try {
                         ResultSet rset;
-                        rset = query.executeQuery();
+                        rset = queryRL.executeQuery();
                         while (rset.next()){
                             lrequests.add(new LineRequest(
                             rset.getBigDecimal("garment"),
@@ -157,11 +165,11 @@ public class RequestEJBBean implements RequestEJB, RequestEJBLocal {
                 @WebMethod
                 public boolean insertRequest(Request r) {
                     try {
-                        insert.setBigDecimal(1,r.getId());
-                        insert.setBigDecimal(2, r.getClient());
-                        insert.setDate(3, (java.sql.Date) r.getDeliverDate());
-                        insert.setDate(4, (java.sql.Date) r.getRequestDate());
-                        insert.executeUpdate();
+                        insertR.setBigDecimal(1,r.getId());
+                        insertR.setBigDecimal(2, r.getClient());
+                        insertR.setDate(3, (java.sql.Date) r.getDeliverDate());
+                        insertR.setDate(4, (java.sql.Date) r.getRequestDate());
+                        insertR.executeUpdate();
                         return true;
                     } catch (SQLException e) {
                         System.out.println(e.getErrorCode());
@@ -173,11 +181,11 @@ public class RequestEJBBean implements RequestEJB, RequestEJBLocal {
                 @WebMethod
                 public boolean updateRequest(Request r) {
                     try {
-                        update.setBigDecimal(1,r.getId());
-                        update.setBigDecimal(2, r.getClient());
-                        update.setDate(3, (java.sql.Date) r.getDeliverDate());
-                        update.setDate(4, (java.sql.Date) r.getRequestDate());
-                        update.executeUpdate();
+                        updateR.setBigDecimal(1,r.getId());
+                        updateR.setBigDecimal(2, r.getClient());
+                        updateR.setDate(3, (java.sql.Date) r.getDeliverDate());
+                        updateR.setDate(4, (java.sql.Date) r.getRequestDate());
+                        updateR.executeUpdate();
                         return true;
                     } catch (SQLException e) {
                         return false;
@@ -188,8 +196,8 @@ public class RequestEJBBean implements RequestEJB, RequestEJBLocal {
                 @WebMethod
                 public boolean removeRequest(Request r) {
                     try{
-                        remove.setBigDecimal(1, r.getId());
-                        remove.executeUpdate();
+                        removeR.setBigDecimal(1, r.getId());
+                        removeR.executeUpdate();
                         return true;
                     }catch(SQLException e){
                         return false;
@@ -203,7 +211,7 @@ public class RequestEJBBean implements RequestEJB, RequestEJBLocal {
                     requests = new ArrayList<Request>();
                     try {
                         ResultSet rset;
-                        rset = query.executeQuery();
+                        rset = queryR.executeQuery();
                         while (rset.next()){
                             requests.add(new Request(
                             rset.getBigDecimal("client"),
