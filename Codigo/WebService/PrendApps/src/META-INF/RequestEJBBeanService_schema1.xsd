@@ -26,6 +26,16 @@
       <xsd:element name="return" type="xsd:int"/>
     </xsd:sequence>
   </xsd:complexType>
+  <xsd:complexType name="getLRfromRequest">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="xsd:int"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="getLRfromRequestResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:lineRequest" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
   <xsd:complexType name="getLineRquests"/>
   <xsd:complexType name="getLineRquestsResponse">
     <xsd:sequence>
@@ -128,6 +138,8 @@
   <xsd:element name="commitResponse" type="ns0:commitResponse"/>
   <xsd:element name="getConnection" type="ns0:getConnection"/>
   <xsd:element name="getConnectionResponse" type="ns0:getConnectionResponse"/>
+  <xsd:element name="getLRfromRequest" type="ns0:getLRfromRequest"/>
+  <xsd:element name="getLRfromRequestResponse" type="ns0:getLRfromRequestResponse"/>
   <xsd:element name="getLineRquests" type="ns0:getLineRquests"/>
   <xsd:element name="getLineRquestsResponse" type="ns0:getLineRquestsResponse"/>
   <xsd:element name="getRequests" type="ns0:getRequests"/>

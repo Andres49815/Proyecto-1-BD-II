@@ -1,6 +1,8 @@
 package prendapps;
 
 
+import java.math.BigDecimal;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -35,6 +37,7 @@ public class RequestEJBBean implements RequestEJB, RequestEJBLocal {
         static PreparedStatement removeRL;
         static PreparedStatement queryR;
         static PreparedStatement queryRL;
+        static PreparedStatement queryRLfromR;
 
         public RequestEJBBean() {
         }
@@ -57,7 +60,8 @@ public class RequestEJBBean implements RequestEJB, RequestEJBLocal {
                         queryRL = conn.prepareStatement("Select * from Line_Request");
                         queryR = conn.prepareStatement("Select * from Request");
                         removeR = conn.prepareStatement("Delete from Request where id = ?");
-                        removeRL = conn.prepareStatement("Delete from Line_Request where line_id = ? and request_line = ?");
+                        removeRL = conn.prepareStatement("Delete from Line_Request where line_id = ? and request_id = ?");
+                        queryRLfromR = conn.prepareStatement("Select * from Line_Request where request_id = ?");
                         return connectionList.size() - 1;                 
                     }catch(SQLException e){
                         return -1;
@@ -114,8 +118,8 @@ public class RequestEJBBean implements RequestEJB, RequestEJBLocal {
                 @WebMethod
                 public boolean removeLineRequest(LineRequest lr) {
                     try{
-                        removeRL.setBigDecimal(1, lr.getRequestId());
-                        removeRL.setBigDecimal(2, lr.getLineId());
+                        removeRL.setBigDecimal(1, lr.getLineId());
+                        removeRL.setBigDecimal(2, lr.getRequestId());
                         removeRL.executeUpdate();
                         return true;
                     }catch(SQLException e){
@@ -231,6 +235,28 @@ public class RequestEJBBean implements RequestEJB, RequestEJBLocal {
             @WebMethod
             public String hola() {
                 return "holaaaaaa ajajajajajaja";
+            }
+            
+            @WebMethod
+            public Collection<LineRequest> getLRfromRequest(int id){
+                Collection<LineRequest> linerequests = new ArrayList<>();
+                try{
+                    ResultSet rset;
+                    queryRLfromR.setBigDecimal(1, new BigDecimal(id));
+                    rset = queryRLfromR.executeQuery();
+                    while(rset.next()){
+                        linerequests.add(new LineRequest(
+                            rset.getBigDecimal("garment"),
+                            rset.getBigDecimal("garment_size"),
+                            rset.getBigDecimal("line_id"),
+                            rset.getBigDecimal("quantity"),
+                            rset.getBigDecimal("request_id"),
+                            rset.getDouble("unit_price")
+                                            ));                        
+                    }
+                    return linerequests;
+                }catch(SQLException ignored){}
+                return linerequests;
             }
         }
 
