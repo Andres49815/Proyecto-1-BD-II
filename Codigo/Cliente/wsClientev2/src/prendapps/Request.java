@@ -12,6 +12,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+
 import model.ForTable;
 
 
@@ -39,7 +40,7 @@ import model.ForTable;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "request", propOrder = { "client", "deliverDate", "id", "requestDate" })
-public class Request implements ForTable{
+public class Request implements ForTable {
 
     protected BigDecimal client;
     @XmlSchemaType(name = "dateTime")
@@ -144,26 +145,5 @@ public class Request implements ForTable{
         this.requestDate = value;
     }
 
-    @Override public int getID() {
-            return 0;
-        }
 
-        @Override public String getTitle() {
-            return this.id + ": " + this.client;
-        }
-
-        @Override public String[] getHeader() {
-            String[] head = {"ID", "CLIENT", "REQUEST DATE", "DELIVER DATE", "MODIFY", "DELETE", "VIEW LINES"};
-            return head;
-        }
-
-        @Override public Object[] getRow() {
-            Object[] row = {this.id, this.client, this.requestDate, this.deliverDate, 
-                new JButton("MODIFY"), new JButton("DELETE"), new JButton("VIEW LINES")};
-            return row;
-        }
-
-        @Override public ArrayList<ForTable> getNext() {
-            return null;
-        }
 }

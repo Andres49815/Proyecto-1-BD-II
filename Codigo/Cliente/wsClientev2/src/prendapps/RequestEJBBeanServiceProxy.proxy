@@ -40,6 +40,7 @@
    </list>
    <hash n="DATA_MODEL">
       <value n="ATTACHMENT_ENCODING" v="MIME"/>
+      <value n="FIXED_WSDL" v="false"/>
       <list n="LOCAL_FILES"/>
       <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
       <url n="ORACLE_WEBSERVICES_XML" path="RequestEJBBeanService.xml"/>
@@ -216,7 +217,7 @@
             </hash>
          </list>
          <list n="BINDING_FILES"/>
-         <value n="GUID" v="2dac1627-0166-1000-8345-ac13280ece37"/>
+         <value n="GUID" v="743ad532-0166-1000-8003-c0a8ff017482"/>
          <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy$ProxyJavaWebService"/>
          <list n="PO_">
             <hash>

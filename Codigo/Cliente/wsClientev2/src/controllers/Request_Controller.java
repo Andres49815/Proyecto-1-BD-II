@@ -57,6 +57,7 @@ public class Request_Controller implements ActionListener, MouseListener {
         this.view.setVisible(true);
     }
     private void ConfigureView() {
+        this.view.Commit_Button.addActionListener(this);
         this.view.SetTable(model);
         this.view.Create_Button.addActionListener(this);
         this.view.Requests_Table.addMouseListener(this);
@@ -75,26 +76,30 @@ public class Request_Controller implements ActionListener, MouseListener {
                     list.add(r);
                 }
                 view.SetTable(list);
+                break;
+            default:
+                RequestEJBBeanService requestEJBBeanService = new RequestEJBBeanService();
+                RequestEJBBean requestEJBBean = requestEJBBeanService.getRequestEJBBeanPort();
+                requestEJBBean.commit(ProgramState.getConn());
         }
     }
     
     
     private void CreateNew() {
         if (actualRequest == -1) {
+            Request request = new Request();
+            request.setId(new BigDecimal(-1));
             
+            NewRequest_Controller controller = new NewRequest_Controller(new NewRequest_View(),request, this);
         }
         else {
             LineRequest line;
             NewLine_Controller controller;
             
             line = new LineRequest();
-            line.setGarment(new BigDecimal(454));
-            line.setLineId(new BigDecimal(45));
-            line.setGarmentSize(new BigDecimal(2000));
-            line.setQuantity(new BigDecimal(4));
-            line.setRequestId(new BigDecimal(465));
-            line.setUnitPrice(564.04);
-            controller = new NewLine_Controller(line, new NewLine_View());
+            line.setLineId(new BigDecimal(-1));
+            line.setRequestId(new BigDecimal(this.actualRequest));
+            controller = new NewLine_Controller(line, new NewLine_View(), view);
         }
     }
     
@@ -135,13 +140,16 @@ public class Request_Controller implements ActionListener, MouseListener {
     
     private void Modify(int row) {
         if (actualRequest == -1) {
+            NewRequest_Controller controller;
             
+            Request rq = (Request) model.get(row);
+            controller = new NewRequest_Controller(new NewRequest_View(), rq, this);
         }
         else {
             NewLine_Controller controller;
             
             LineRequest line = (LineRequest) model.get(row);
-            controller = new NewLine_Controller(line, new NewLine_View());
+            controller = new NewLine_Controller(line, new NewLine_View(),view);
             this.view.dispose();
         }
     }
@@ -150,7 +158,7 @@ public class Request_Controller implements ActionListener, MouseListener {
         try{
             Request request = (Request) model.get(row);
         }catch(Exception e){
-            System.out.println("ORACLE ES UNA BASURA!!!!");
+            System.out.println("no sirve!!!!");
         }
         Request request  = (Request) model.get(row);
         ArrayList<ForTable> listAux = new ArrayList<>();
@@ -162,7 +170,7 @@ public class Request_Controller implements ActionListener, MouseListener {
         }
         //request.setLines(lista);
         ArrayList<ForTable> newModel = listAux;
-        actualRequest = request.getID();
+        actualRequest = (int)request.getId().longValue();
         
         //Request_Controller rc = new Request_Controller(new Request_View(),newModel);
         
@@ -178,7 +186,22 @@ public class Request_Controller implements ActionListener, MouseListener {
     public RequestEJBBean getDb() {
         return db;
     }
-
+    
+    public void refresh(){
+        RequestEJBBeanService requestEJBBeanService = new RequestEJBBeanService();
+        RequestEJBBean requestEJBBean = requestEJBBeanService.getRequestEJBBeanPort();
+        db = requestEJBBean;
+        try{
+            ArrayList<ForTable> list = new ArrayList<>();
+            ArrayList<Request> reqsAux = (ArrayList<Request>) db.getRequests();
+            for(Request r : reqsAux){
+                list.add(r);
+            }
+            view.SetTable(list);
+        }catch(Exception exception){
+            System.out.println("ERROR 502");
+        }
+    }
 
     private void Delete(int row) {
         RequestEJBBeanService requestEJBBeanService = new RequestEJBBeanService();
@@ -199,11 +222,6 @@ public class Request_Controller implements ActionListener, MouseListener {
             }else{
                 System.out.println("no bueno");
             }
-        }
-        if (db.commit(ProgramState.getInstance().getConn())){
-            System.out.println("JEJEJEJEJJEJEEJJJE");
-        }else{
-            System.out.println("(TT-TT)");
         }
         ArrayList<ForTable> reqs = new ArrayList<>();
         if(req){

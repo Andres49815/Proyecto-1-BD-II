@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
 
 import model.ForTable;
+
 import javax.swing.JButton;
 
 
@@ -39,7 +40,7 @@ import javax.swing.JButton;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "lineRequest", propOrder = { "garment", "garmentSize", "lineId", "quantity", "requestId", "unitPrice" })
-public class LineRequest implements ForTable{
+public class LineRequest implements ForTable {
 
     protected BigDecimal garment;
     protected BigDecimal garmentSize;
@@ -184,30 +185,5 @@ public class LineRequest implements ForTable{
         this.unitPrice = value;
     }
 
-    @Override
-    public int getID() {
-        return this.lineId.intValue();
-    }
 
-    @Override
-    public String getTitle() {
-        return this.requestId + "";
-    }
-
-    @Override
-    public String[] getHeader() {
-        String[] head = { "LINE", "GARMENT", "SIZE", "QUANTITY", "MODIFY", "DELETE" };
-        return head;
-    }
-
-    @Override
-    public Object[] getRow() {
-        Object[] row = {this.lineId, this.garment, this.garmentSize, this.quantity, new JButton("MODIFY"), new JButton("DELETE")};
-        return row;
-    }
-
-    @Override
-    public ArrayList<ForTable> getNext() {
-        return null;
-    }
 }

@@ -17,6 +17,10 @@ import controllers.ProgramState;
  *
  * @author Andres Obando Alfaro
  */
+/**
+ *
+ * @author Andres Obando Alfaro
+ */
 public class Request_View extends javax.swing.JFrame {
     
     public Request_Table table = new Request_Table();
@@ -42,6 +46,7 @@ public class Request_View extends javax.swing.JFrame {
         Requests_Table = new javax.swing.JTable();
         Create_Button = new javax.swing.JButton();
         Back_Button = new javax.swing.JButton();
+        Commit_Button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -61,17 +66,8 @@ public class Request_View extends javax.swing.JFrame {
         Create_Button.setText("Create");
 
         Back_Button.setText("Back");
-        
-        this.addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent windowEvent) {
-                if (JOptionPane.showConfirmDialog(null, "Desea cerrar la aplicacion?",
-                        "Cerrar programa", JOptionPane.YES_NO_OPTION,
-                        JOptionPane.QUESTION_MESSAGE) == JOptionPane.YES_OPTION) {
-                    ProgramState.getBean().closeConection(ProgramState.getConn());
-                    System.exit(0);
-                }
-            }
-        });
+
+        Commit_Button.setText("Commit");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -84,6 +80,8 @@ public class Request_View extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(Back_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Commit_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(190, 190, 190)
                         .addComponent(Create_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
@@ -93,7 +91,8 @@ public class Request_View extends javax.swing.JFrame {
                 .addContainerGap(58, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Create_Button)
-                    .addComponent(Back_Button))
+                    .addComponent(Back_Button)
+                    .addComponent(Commit_Button))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(90, 90, 90))
@@ -134,6 +133,7 @@ public class Request_View extends javax.swing.JFrame {
 
     // Variables declaration - do not modify                     
     public javax.swing.JButton Back_Button;
+    public javax.swing.JButton Commit_Button;
     public javax.swing.JButton Create_Button;
     public javax.swing.JTable Requests_Table;
     private javax.swing.JScrollPane jScrollPane1;

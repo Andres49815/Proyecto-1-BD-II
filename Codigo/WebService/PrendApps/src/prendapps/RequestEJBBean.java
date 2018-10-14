@@ -20,6 +20,7 @@ import javax.jws.WebService;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
+import java.sql.Date;
 
 
 @Stateless(name = "RequestEJB", mappedName = "WebService-PrendApps-RequestEJB")
@@ -54,9 +55,9 @@ public class RequestEJBBean implements RequestEJB, RequestEJBLocal {
                         //conn.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
                         connectionList.add(conn);
                         insertRL = conn.prepareStatement("Insert into Line_Request values(?,?,?,?,?,?)");
-                        insertR = conn.prepareStatement("insert into Request values (?,?,?,?)");
-                        updateRL = conn.prepareStatement("Update Line_Request set request_id = ?, line_id = ?, garment = ?, garment_size = ?, quantity = ?, unit_price = ?");
-                        updateR = conn.prepareStatement("Update Request set request_id = ?, line_id = ?, garment = ?, garment_size = ?, quantity = ?, unit_price = ?");
+                        insertR = conn.prepareStatement("insert into Request (client, REQUEST_DATE, DELIVER_DATE) values (?,?,?)");
+                        updateRL = conn.prepareStatement("Update Line_Request set request_id = ?, line_id = ?, garment = ?, garment_size = ?, quantity = ?, unit_price = ? where request_id = ?");
+                        updateR = conn.prepareStatement("Update Request set client = ?, request_date = ?, deliver_date = ? where id = ?");
                         queryRL = conn.prepareStatement("Select * from Line_Request");
                         queryR = conn.prepareStatement("Select * from Request");
                         removeR = conn.prepareStatement("Delete from Request where id = ?");
@@ -97,6 +98,7 @@ public class RequestEJBBean implements RequestEJB, RequestEJBLocal {
                         updateRL.setBigDecimal(4, lr.getGarmentSize());
                         updateRL.setBigDecimal(5, lr.getQuantity());
                         updateRL.setDouble(6,lr.getUnitPrice());
+                        updateRL.setBigDecimal(7, lr.getRequestId());
                         updateRL.executeUpdate();
                         return true;
                     }catch(SQLException e){
@@ -169,10 +171,9 @@ public class RequestEJBBean implements RequestEJB, RequestEJBLocal {
                 @WebMethod
                 public boolean insertRequest(Request r) {
                     try {
-                        insertR.setBigDecimal(1,r.getId());
-                        insertR.setBigDecimal(2, r.getClient());
-                        insertR.setDate(3, (java.sql.Date) r.getDeliverDate());
-                        insertR.setDate(4, (java.sql.Date) r.getRequestDate());
+                        insertR.setBigDecimal(1, r.getClient());
+                        insertR.setDate(3, new Date(r.getDeliverDate().getTime()));
+                        insertR.setDate(2, new Date(r.getRequestDate().getTime()));
                         insertR.executeUpdate();
                         return true;
                     } catch (SQLException e) {
@@ -185,10 +186,10 @@ public class RequestEJBBean implements RequestEJB, RequestEJBLocal {
                 @WebMethod
                 public boolean updateRequest(Request r) {
                     try {
-                        updateR.setBigDecimal(1,r.getId());
-                        updateR.setBigDecimal(2, r.getClient());
-                        updateR.setDate(3, (java.sql.Date) r.getDeliverDate());
-                        updateR.setDate(4, (java.sql.Date) r.getRequestDate());
+                        updateR.setBigDecimal(1, r.getClient());
+                        updateR.setDate(2, new Date(r.getDeliverDate().getTime()));
+                        updateR.setDate(3,  new Date(r.getRequestDate().getTime()));
+                        updateR.setBigDecimal(4, r.getId());
                         updateR.executeUpdate();
                         return true;
                     } catch (SQLException e) {
