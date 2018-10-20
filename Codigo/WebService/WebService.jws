@@ -28,5 +28,6 @@
    </list>
    <list n="listOfChildren">
       <hash><url n="URL" path="PrendApps/PrendApps.jpr"/></hash>
+      <hash><url n="URL" path="PrendApps/PrendApps.jpr"/></hash>
    </list>
 </jws:workspace>
